@@ -24,7 +24,13 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "angular": "^2.X.X",
+    "@angular/common": "^2.X.X",
+    "@angular/compiler": "^2.X.X",
+    "@angular/core": "^2.X.X",
+    "@angular/forms": "^2.X.X",
+    "@angular/http": "^2.X.X",
+    "@angular/platform-browser": "^2.X.X",
+    "@angular/platform-browser-dynamic": "^2.X.X",
     "moment": "^2.X.X"
   }
 }
