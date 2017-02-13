@@ -12,5 +12,8 @@
   },
   "files": [
     "../src/multiple-date-picker.module.ts"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }

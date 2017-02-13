@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var moment = require("moment/moment");
-var MultipleDatePickerComponent = (function () {
+var MultipleDatePickerComponent = MultipleDatePickerComponent_1 = (function () {
     function MultipleDatePickerComponent() {
         this.cssDaysOfSurroundingMonths = this.cssDaysOfSurroundingMonths || 'picker-empty';
         // month = this.month || moment().startOf('day');  // can use this instead of placing in the contructor // ask about purpose of having potenial input for month
@@ -428,16 +428,16 @@ __decorate([
     core_1.Input(),
     __metadata("design:type", Object)
 ], MultipleDatePickerComponent.prototype, "_projectScope", void 0);
-MultipleDatePickerComponent = __decorate([
+MultipleDatePickerComponent = MultipleDatePickerComponent_1 = __decorate([
     core_1.Component({
         //moduleId: module.id,
         selector: 'multiple-date-picker',
-        templateUrl: 'multiple-date-picker.html',
-        styleUrls: ['multiple-date-picker.css'],
+        templateUrl: 'multiple-date-picker.component.html',
+        styleUrls: ['multiple-date-picker.component.css'],
         providers: [
             {
                 provide: forms_1.NG_VALUE_ACCESSOR,
-                useExisting: core_1.forwardRef(function () { return MultipleDatePickerComponent; }),
+                useExisting: core_1.forwardRef(function () { return MultipleDatePickerComponent_1; }),
                 multi: true
             }
         ]
@@ -445,6 +445,7 @@ MultipleDatePickerComponent = __decorate([
     __metadata("design:paramtypes", [])
 ], MultipleDatePickerComponent);
 exports.MultipleDatePickerComponent = MultipleDatePickerComponent;
+var MultipleDatePickerComponent_1;
 // (function (angular) {
 //     'use strict';
 //     var multipleDatePicker = function () {

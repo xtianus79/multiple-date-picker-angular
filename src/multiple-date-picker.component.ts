@@ -5,8 +5,8 @@ import * as moment from 'moment/moment';
 @Component({
     //moduleId: module.id,
     selector: 'multiple-date-picker',
-    templateUrl: 'multiple-date-picker.html',
-    styleUrls: ['multiple-date-picker.css'],
+    templateUrl: 'multiple-date-picker.component.html',
+    styleUrls: ['multiple-date-picker.component.css'],
     providers: [
         { 
           provide: NG_VALUE_ACCESSOR,

@@ -45,9 +45,9 @@ export declare class MultipleDatePickerComponent implements OnInit, ControlValue
     projectScope2: number;
     logMonthChanged(newMonth: any, oldMonth: any): void;
     checkNavigationButtons(): void;
-    getDaysOfWeek(): string[];
+    getDaysOfWeek(): any[];
     getMonthYearToDisplay(): any;
-    getYearsForSelect(): string[];
+    getYearsForSelect(): any[];
     toggleDay(event: any, day: any): void;
     clearDays(): void;
     logDays(): void;

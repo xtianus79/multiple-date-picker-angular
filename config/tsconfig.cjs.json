@@ -7,12 +7,19 @@
     "moduleResolution": "node",
     "sourceMap": true,
     "removeComments": false,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "declaration": true,
     "outDir": "../dist"
 
   },
   "files": [
     "../src/multiple-date-picker.module.ts"
-  ]
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "angularCompilerOptions": {
+    "genDir": "../aot",
+    "skipMetadataEmit": false
+  }
 }
