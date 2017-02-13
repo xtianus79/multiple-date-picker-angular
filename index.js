@@ -1,5 +1,5 @@
 function __export(m) {
-    for (let p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 __export(require('./dist/multiple-date-picker.module'));
 
