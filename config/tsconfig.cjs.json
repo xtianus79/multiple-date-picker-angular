@@ -1,16 +1,13 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es6",
+    "target": "es5",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "sourceMap": false,
     "moduleResolution": "node",
-    "sourceMap": true,
-    "removeComments": false,
-    "noImplicitAny": false,
     "declaration": true,
     "outDir": "../dist"
-
   },
   "files": [
     "../src/multiple-date-picker.module.ts"
