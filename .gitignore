@@ -4,4 +4,8 @@
 target/
 *.log
 bower_components/
-node_modules/
+npm-debug.log
+node_modules
+jspm_packages
+.idea
+build

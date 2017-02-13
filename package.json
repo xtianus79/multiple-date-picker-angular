@@ -1,27 +1,53 @@
 {
   "name": "multiple-date-picker-a2",
-  "version": "2.4.2",
+  "version": "2.4.3",
+  "description": "Multiple Date Picker for Angular* (angular 2+)",
+  "main": "index.js",
+  "scripts": {
+    "build:system": "tsc -p config/tsconfig.system.json",
+    "build:cjs": "tsc -p config/tsconfig.cjs.json",
+    "build": "npm run build:system"
+  },
+  "files": [
+    "dist",
+    "index.js",
+    "index.d.ts"
+  ],
+  "keywords": [
+    "angular",
+    "angular2",
+    "multiple date picker",
+    "multipel-date-picker",
+    "date picker",
+    "date-picker"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xtianus79/multiple-date-picker-a2"
+  },
+  "bugs": {
+    "url": "https://github.com/xtianus79/multiple-date-picker-a2/issues"
+  },
+  "author": "Christian Holes <xtianus@live.com>",
+  "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-contrib-copy": "^0.1.2",
-    "gulp-git": "^1.7.1",
-    "gulp-jshint": "^2.0.0",
-    "gulp-less": "^3.0.5",
+    "gulp-git": "^1.14.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-less": "^3.3.0",
     "gulp-minify-css": "^1.2.4",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
-    "gulp-uglify": "^1.5.3",
-    "jshint": "^2.9.1",
-    "jshint-stylish": "^2.1.0",
-    "run-sequence": "^1.1.5",
-    "yargs": "^4.6.0"
+    "gulp-uglify": "^2.0.1",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1",
+    "run-sequence": "^1.2.2",
+    "yargs": "^6.6.0"
   },
   "engines": {
     "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "grunt test"
   },
   "dependencies": {
     "@angular/common": "^2.X.X",

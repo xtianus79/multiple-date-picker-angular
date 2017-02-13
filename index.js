@@ -1,6 +1,9 @@
-require('./dist/multipleDatePicker');
-module.exports = 'multipleDatePicker';
+function __export(m) {
+    for (let p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(require('./dist/multiple-date-picker.module'));
 
 exports.printMsg = function() {
   console.log("This is a message from the index.js file -- edit as needed");
-}
+};
+

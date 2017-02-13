@@ -1,0 +1,1 @@
+export * from './dist/multiple-date-picker.module';
