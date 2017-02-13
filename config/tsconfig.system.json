@@ -1,21 +1,16 @@
 {
   "compilerOptions": {
+    "module": "system",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
-    "module": "commonjs",
     "moduleResolution": "node",
-    "sourceMap": true,
+    "sourceMap": false,
     "removeComments": false,
     "noImplicitAny": false,
-    "outDir": "../dist",
-    "declaration": true
+    "outFile": "../dist/multiple-date-picker-a2-bundle.js"
   },
   "files": [
     "../src/multiple-date-picker.module.ts"
-  ],
-  "exclude": [
-      "**/node_modules",
-      "**/*.spec.ts"
   ]
 }
