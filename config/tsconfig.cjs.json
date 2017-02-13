@@ -14,5 +14,9 @@
   },
   "files": [
     "../src/multiple-date-picker.module.ts"
-  ]
+  ],
+    "angularCompilerOptions": {
+    "genDir": "../aot",
+    "skipMetadataEmit": false
+  }
 }

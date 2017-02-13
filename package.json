@@ -1,12 +1,12 @@
 {
   "name": "multiple-date-picker-a2",
-  "version": "2.4.15",
+  "version": "2.4.16",
   "description": "Multiple Date Picker for Angular* (angular 2+)",
   "main": "index.js",
   "scripts": {
-    "build:system": "rm -rf dist && mkdir dist && tsc -p config/tsconfig.system.json",
-    "build:cjs": "rm -rf dist && mkdir dist && tsc -p config/tsconfig.cjs.json",
-    "build": "npm run build:cjs"
+    "build:system": "tsc -p config/tsconfig.system.json",
+    "build:cjs": "ngc -p config/tsconfig.cjs.json",
+    "build": "npm run build:cjs && npm run build:system"
   },
   "files": [
     "dist",
@@ -51,8 +51,7 @@
     "jshint-stylish": "^2.2.1",
     "run-sequence": "^1.2.2",
     "yargs": "^6.6.0",
-    "zone.js": "0.7.6",
-    "webpack": "2.1.0-beta.25"
+    "zone.js": "0.7.6"
   },
   "engines": {
     "node": ">=0.10.0"
