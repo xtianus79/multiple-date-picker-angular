@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { MultipleDatePickerComponent } from './multiple-date-picker.component'
 
 @NgModule({
     imports: [
-        CommonModule
+        BrowserModule,
+        FormsModule
     ],
     declarations: [
         MultipleDatePickerComponent,
     ],
-    providers: [MultipleDatePickerComponent]
+    exports: [MultipleDatePickerComponent]
 })
 export class MultipleDatePickerModule { }

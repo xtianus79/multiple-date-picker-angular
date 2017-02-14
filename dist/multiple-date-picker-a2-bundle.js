@@ -480,18 +480,21 @@ System.register("multiple-date-picker.component", ['@angular/core', '@angular/fo
         }
     }
 });
-System.register("multiple-date-picker.module", ['@angular/core', '@angular/common', "multiple-date-picker.component"], function(exports_3, context_3) {
+System.register("multiple-date-picker.module", ['@angular/core', '@angular/platform-browser', '@angular/forms', "multiple-date-picker.component"], function(exports_3, context_3) {
     "use strict";
     var __moduleName = context_3 && context_3.id;
-    var core_2, common_1, multiple_date_picker_component_1;
+    var core_2, platform_browser_1, forms_2, multiple_date_picker_component_1;
     var MultipleDatePickerModule;
     return {
         setters:[
             function (core_2_1) {
                 core_2 = core_2_1;
             },
-            function (common_1_1) {
-                common_1 = common_1_1;
+            function (platform_browser_1_1) {
+                platform_browser_1 = platform_browser_1_1;
+            },
+            function (forms_2_1) {
+                forms_2 = forms_2_1;
             },
             function (multiple_date_picker_component_1_1) {
                 multiple_date_picker_component_1 = multiple_date_picker_component_1_1;
@@ -503,12 +506,13 @@ System.register("multiple-date-picker.module", ['@angular/core', '@angular/commo
                 MultipleDatePickerModule = __decorate([
                     core_2.NgModule({
                         imports: [
-                            common_1.CommonModule
+                            platform_browser_1.BrowserModule,
+                            forms_2.FormsModule
                         ],
                         declarations: [
                             multiple_date_picker_component_1.MultipleDatePickerComponent,
                         ],
-                        providers: [multiple_date_picker_component_1.MultipleDatePickerComponent]
+                        exports: [multiple_date_picker_component_1.MultipleDatePickerComponent]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], MultipleDatePickerModule);
