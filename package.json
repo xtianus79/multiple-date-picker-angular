@@ -1,6 +1,6 @@
 {
   "name": "multiple-date-picker-a2",
-  "version": "2.4.17",
+  "version": "2.4.18",
   "description": "Multiple Date Picker for Angular* (angular 2+)",
   "main": "index.js",
   "scripts": {
@@ -70,11 +70,12 @@
     "ts-loader": "^1.0.0",
     "typescript": "2.0.6",
     "webpack": "2.1.0-beta.25",
-    "zone.js": "0.7.4",
-    "moment": "^2.X.X"
+    "zone.js": "0.7.4"
   },
   "engines": {
     "node": ">=0.10.0"
   },
-  "dependencies": { }
+  "dependencies": { 
+    "moment": "^2.X.X"
+  }
 }
