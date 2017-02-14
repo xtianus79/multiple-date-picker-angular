@@ -22,9 +22,6 @@ export declare class MultipleDatePickerComponent implements OnInit, ControlValue
     changeYearPast: string;
     changeYearFuture: string;
     projectScope: any[];
-    something: any[];
-    increment(): void;
-    decrement(): void;
     days: any[];
     _weekDaysOff: any;
     daysOff: any;
@@ -41,8 +38,8 @@ export declare class MultipleDatePickerComponent implements OnInit, ControlValue
     propagateChange: (_: any) => void;
     registerOnChange(fn: any): void;
     registerOnTouched(): void;
-    _projectScope: number;
-    projectScope2: number;
+    _projectScope: any[];
+    projectScope2: any[];
     logMonthChanged(newMonth: any, oldMonth: any): void;
     checkNavigationButtons(): void;
     getDaysOfWeek(): any[];
@@ -56,7 +53,7 @@ export declare class MultipleDatePickerComponent implements OnInit, ControlValue
     changeMonth(event: any, disable: any, add: any): void;
     changeYear(year: any): void;
     isDayOff(day: any): any;
-    isSelected(day: any): void;
+    isSelected(day: any): boolean;
     generate(): void;
     findArray(day: any): void;
 }

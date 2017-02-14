@@ -53,7 +53,6 @@ export class Wrapper_MultipleDatePickerComponent {
   /*private*/ _expr_20:any;
   /*private*/ _expr_21:any;
   /*private*/ _expr_22:any;
-  /*private*/ _expr_23:any;
   constructor() {
     this._changed = false;
     this.context = new import0.MultipleDatePickerComponent();
@@ -80,7 +79,6 @@ export class Wrapper_MultipleDatePickerComponent {
     this._expr_20 = import1.UNINITIALIZED;
     this._expr_21 = import1.UNINITIALIZED;
     this._expr_22 = import1.UNINITIALIZED;
-    this._expr_23 = import1.UNINITIALIZED;
   }
   ngOnDetach(view:import2.AppView<any>,componentView:import2.AppView<any>,el:any):void {
   }
@@ -233,25 +231,18 @@ export class Wrapper_MultipleDatePickerComponent {
       this._expr_20 = currValue;
     }
   }
-  check_something(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_sundayFirstDay(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_21,currValue))) {
       this._changed = true;
-      this.context.something = currValue;
+      this.context.sundayFirstDay = currValue;
       this._expr_21 = currValue;
     }
   }
-  check_sundayFirstDay(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check__projectScope(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_22,currValue))) {
       this._changed = true;
-      this.context.sundayFirstDay = currValue;
-      this._expr_22 = currValue;
-    }
-  }
-  check__projectScope(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
-    if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_23,currValue))) {
-      this._changed = true;
       this.context._projectScope = currValue;
-      this._expr_23 = currValue;
+      this._expr_22 = currValue;
     }
   }
   ngDoCheck(view:import2.AppView<any>,el:any,throwOnChange:boolean):boolean {

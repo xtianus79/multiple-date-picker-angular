@@ -1,9 +1,18 @@
 "use strict";
-var core_1 = require('@angular/core');
-var forms_1 = require('@angular/forms');
-var template_1 = require('./template');
-var moment = require('moment/moment');
-var MultipleDatePickerComponent = (function () {
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var core_1 = require("@angular/core");
+var forms_1 = require("@angular/forms");
+var template_1 = require("./template");
+var moment = require("moment/moment");
+var MultipleDatePickerComponent = MultipleDatePickerComponent_1 = (function () {
     function MultipleDatePickerComponent() {
         this.cssDaysOfSurroundingMonths = this.cssDaysOfSurroundingMonths || 'picker-empty';
         // month = this.month || moment().startOf('day');  // can use this instead of placing in the contructor // ask about purpose of having potenial input for month
@@ -17,28 +26,28 @@ var MultipleDatePickerComponent = (function () {
         // _cssDaysOfSurroundingMonths: any = this._cssDaysOfSurroundingMonths || 'picker-empty';
         this.yearsForSelect = [];
         this.propagateChange = function (_) { };
-        this._projectScope = 55; // notice the '_'
         this.month = this.month || moment().startOf('day');
     }
-    MultipleDatePickerComponent.prototype.increment = function () {
-        //this.something++;
-    };
-    MultipleDatePickerComponent.prototype.decrement = function () {
-        //this.something--;
-    };
     MultipleDatePickerComponent.prototype.ngOnInit = function () {
         this.generate();
         this.daysOfWeek = this.getDaysOfWeek();
         //console.log('this.sundayFirstDaydddd = ' + this.sundayFirstDay);
     };
-    // writeValue(value: any) {
-    //   if (value !== undefined) {
-    //     this.counterValue = value;
-    //   }
-    // }
     MultipleDatePickerComponent.prototype.writeValue = function (value) {
+        var _this = this;
+        console.log('the value = ' + JSON.stringify(value));
         if (value !== undefined) {
             this.projectScope = value;
+            if (value !== null) {
+                this.projectScope.forEach(function (val) {
+                    var day = moment(val);
+                    _this.days.forEach(function (d) {
+                        if (d.date.isSame(day)) {
+                            d.mdp.selected = true;
+                        }
+                    });
+                });
+            }
         }
     };
     MultipleDatePickerComponent.prototype.registerOnChange = function (fn) {
@@ -142,23 +151,6 @@ var MultipleDatePickerComponent = (function () {
     MultipleDatePickerComponent.prototype.logDays = function () {
         this.generate();
     }; // remove this and from html
-    // hoverDay(event, day) {
-    //     event.preventDefault();
-    //     //console.log('what is thiz = ' + event.preventDefault() + ' 1 ' + prevented);
-    //     var prevented = false;
-    //     //console.log('what is thiz 22222 = ' + event.preventDefault() + ' 2 ' + prevented);
-    //     event.preventDefault = function () {
-    //         prevented = true;
-    //     };
-    //     // console.log('this was called');
-    //     if (true) {
-    //        // console.log('this was called inside of dayHover = ' + JSON.stringify(event) + ' --- ' + JSON.stringify(day) + ' ----- ');
-    //         //this.dayHover(event, day);
-    //     }
-    //     if (!prevented) {
-    //         day.mdp.hover = event.type === 'mouseover';
-    //     }
-    // }
     MultipleDatePickerComponent.prototype.rightClicked = function (event, day) {
         if (typeof this.rightClick === 'function') {
             event.preventDefault();
@@ -258,9 +250,9 @@ var MultipleDatePickerComponent = (function () {
         // //console.log('this.projectScope = ' + isSameDay(d));
         // return isSameDay(this.projectScope, 'd');
         //return this.projectScope.some(isSameDay);
-        // return this.projectScope.some(function (d) {
-        //     return day.date.isSame(d, 'day');
-        // });
+        return this.projectScope.some(function (d) {
+            return day.date.isSame(d, 'day');
+        });
     };
     /*Generate the calendar*/
     MultipleDatePickerComponent.prototype.generate = function () {
@@ -296,7 +288,7 @@ var MultipleDatePickerComponent = (function () {
             }
             day.selectable = !_this.isDayOff(day);
             console.log('this.sameDaySelect() = ' + _this.isSelected(day));
-            //day.mdp.selected = this.isSelected(day);
+            day.mdp.selected = _this.isSelected(day);
             day.mdp.today = day.date.isSame(now, 'day');
             day.mdp.past = day.date.isBefore(now, 'day');
             day.mdp.future = day.date.isAfter(now, 'day');
@@ -322,49 +314,115 @@ var MultipleDatePickerComponent = (function () {
     MultipleDatePickerComponent.prototype.findArray = function (day) {
         console.log('this.projectScope = ' + this.projectScope + ' and is selected ' + day);
     };
-    MultipleDatePickerComponent.decorators = [
-        { type: core_1.Component, args: [{
-                    //moduleId: module.id,
-                    selector: 'multiple-date-picker',
-                    template: template_1.DEFAULT_TEMPLATE,
-                    styles: [template_1.DEFAULT_STYLES],
-                    providers: [
-                        {
-                            provide: forms_1.NG_VALUE_ACCESSOR,
-                            useExisting: core_1.forwardRef(function () { return MultipleDatePickerComponent; }),
-                            multi: true
-                        }
-                    ]
-                },] },
-    ];
-    /** @nocollapse */
-    MultipleDatePickerComponent.ctorParameters = function () { return []; };
-    MultipleDatePickerComponent.propDecorators = {
-        'highlightDays': [{ type: core_1.Input },],
-        'dayClick': [{ type: core_1.Input },],
-        'dayHover': [{ type: core_1.Input },],
-        'rightClick': [{ type: core_1.Input },],
-        'month': [{ type: core_1.Input },],
-        'monthChanged': [{ type: core_1.Input },],
-        'monthClick': [{ type: core_1.Input },],
-        'weekDaysOff': [{ type: core_1.Input },],
-        'allDaysOff': [{ type: core_1.Input },],
-        'daysAllowed': [{ type: core_1.Input },],
-        'disableNavigation': [{ type: core_1.Input },],
-        'disallowBackPastMonths': [{ type: core_1.Input },],
-        'disallowGoFuturMonths': [{ type: core_1.Input },],
-        'showDaysOfSurroundingMonths': [{ type: core_1.Input },],
-        'cssDaysOfSurroundingMonths': [{ type: core_1.Input },],
-        'fireEventsForDaysOfSurroundingMonths': [{ type: core_1.Input },],
-        'disableDaysBefore': [{ type: core_1.Input },],
-        'disableDaysAfter': [{ type: core_1.Input },],
-        'changeYearPast': [{ type: core_1.Input },],
-        'changeYearFuture': [{ type: core_1.Input },],
-        'projectScope': [{ type: core_1.Input },],
-        'something': [{ type: core_1.Input },],
-        'sundayFirstDay': [{ type: core_1.Input },],
-        '_projectScope': [{ type: core_1.Input },],
-    };
     return MultipleDatePickerComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], MultipleDatePickerComponent.prototype, "highlightDays", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], MultipleDatePickerComponent.prototype, "dayClick", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], MultipleDatePickerComponent.prototype, "dayHover", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], MultipleDatePickerComponent.prototype, "rightClick", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], MultipleDatePickerComponent.prototype, "month", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], MultipleDatePickerComponent.prototype, "monthChanged", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], MultipleDatePickerComponent.prototype, "monthClick", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], MultipleDatePickerComponent.prototype, "weekDaysOff", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], MultipleDatePickerComponent.prototype, "allDaysOff", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], MultipleDatePickerComponent.prototype, "daysAllowed", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], MultipleDatePickerComponent.prototype, "disableNavigation", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], MultipleDatePickerComponent.prototype, "disallowBackPastMonths", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], MultipleDatePickerComponent.prototype, "disallowGoFuturMonths", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], MultipleDatePickerComponent.prototype, "showDaysOfSurroundingMonths", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], MultipleDatePickerComponent.prototype, "cssDaysOfSurroundingMonths", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], MultipleDatePickerComponent.prototype, "fireEventsForDaysOfSurroundingMonths", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], MultipleDatePickerComponent.prototype, "disableDaysBefore", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], MultipleDatePickerComponent.prototype, "disableDaysAfter", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], MultipleDatePickerComponent.prototype, "changeYearPast", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], MultipleDatePickerComponent.prototype, "changeYearFuture", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Array)
+], MultipleDatePickerComponent.prototype, "projectScope", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], MultipleDatePickerComponent.prototype, "sundayFirstDay", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Array)
+], MultipleDatePickerComponent.prototype, "_projectScope", void 0);
+MultipleDatePickerComponent = MultipleDatePickerComponent_1 = __decorate([
+    core_1.Component({
+        //moduleId: module.id,
+        selector: 'multiple-date-picker',
+        template: template_1.DEFAULT_TEMPLATE,
+        styles: [template_1.DEFAULT_STYLES],
+        providers: [
+            {
+                provide: forms_1.NG_VALUE_ACCESSOR,
+                useExisting: core_1.forwardRef(function () { return MultipleDatePickerComponent_1; }),
+                multi: true
+            }
+        ]
+    }),
+    __metadata("design:paramtypes", [])
+], MultipleDatePickerComponent);
 exports.MultipleDatePickerComponent = MultipleDatePickerComponent;
+var MultipleDatePickerComponent_1;

@@ -43,14 +43,6 @@ export class MultipleDatePickerComponent implements OnInit, ControlValueAccessor
 
     @Input() projectScope: any[] = [];
 
-    @Input() something: any[];
-     increment() {
-    //this.something++;
-  }
-  
-  decrement() {
-    //this.something--;
-  }
     days: any[] = [];
     _weekDaysOff: any = this._weekDaysOff || [];
     daysOff: any = this.daysOff || [];
@@ -74,15 +66,21 @@ export class MultipleDatePickerComponent implements OnInit, ControlValueAccessor
         //console.log('this.sundayFirstDaydddd = ' + this.sundayFirstDay);
     }
 
-    // writeValue(value: any) {
-    //   if (value !== undefined) {
-    //     this.counterValue = value;
-    //   }
-    // }
-
     writeValue(value: any[]) {
+        console.log('the value = ' + JSON.stringify(value));
         if (value !== undefined) {
             this.projectScope = value;
+            if (value !== null) {
+                this.projectScope.forEach((val: Date) => {
+                let day = moment(val);
+                this.days.forEach((d) => {
+                    if(d.date.isSame(day)){
+                        d.mdp.selected = true;
+                    }
+                });
+            });
+            }
+            
         }
     }
 
@@ -95,7 +93,7 @@ export class MultipleDatePickerComponent implements OnInit, ControlValueAccessor
     registerOnTouched() {}
 
     @Input()
-    _projectScope = 55; // notice the '_'
+    _projectScope: any[];
     
     get projectScope2() {
         return this._projectScope;
@@ -210,26 +208,6 @@ export class MultipleDatePickerComponent implements OnInit, ControlValueAccessor
         this.generate();
     } // remove this and from html
 
-    // hoverDay(event, day) {
-    //     event.preventDefault();
-    //     //console.log('what is thiz = ' + event.preventDefault() + ' 1 ' + prevented);
-    //     var prevented = false;
-    //     //console.log('what is thiz 22222 = ' + event.preventDefault() + ' 2 ' + prevented);
-
-    //     event.preventDefault = function () {
-    //         prevented = true;
-    //     };
-    //     // console.log('this was called');
-    //     if (true) {
-    //        // console.log('this was called inside of dayHover = ' + JSON.stringify(event) + ' --- ' + JSON.stringify(day) + ' ----- ');
-    //         //this.dayHover(event, day);
-    //     }
-
-    //     if (!prevented) {
-    //         day.mdp.hover = event.type === 'mouseover';
-    //     }
-    // }
-
     rightClicked(event, day) {
         if (typeof this.rightClick === 'function') {
             event.preventDefault();
@@ -343,9 +321,9 @@ export class MultipleDatePickerComponent implements OnInit, ControlValueAccessor
         
         //return this.projectScope.some(isSameDay);
 
-        // return this.projectScope.some(function (d) {
-        //     return day.date.isSame(d, 'day');
-        // });
+        return this.projectScope.some(function (d) {
+            return day.date.isSame(d, 'day');
+        });
     }
 
     /*Generate the calendar*/
@@ -387,7 +365,7 @@ export class MultipleDatePickerComponent implements OnInit, ControlValueAccessor
                 }
                 day.selectable = !this.isDayOff(day);
                 console.log('this.sameDaySelect() = ' + this.isSelected(day));
-                //day.mdp.selected = this.isSelected(day);
+                day.mdp.selected = this.isSelected(day);
                 day.mdp.today = day.date.isSame(now, 'day');
                 day.mdp.past = day.date.isBefore(now, 'day');
                 day.mdp.future = day.date.isAfter(now, 'day');
@@ -420,6 +398,4 @@ export class MultipleDatePickerComponent implements OnInit, ControlValueAccessor
     findArray(day) {
         console.log('this.projectScope = ' + this.projectScope + ' and is selected ' + day)
     }
-
-
 }
