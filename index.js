@@ -1,7 +1,7 @@
 // function __export(m) {
 //     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 // }
-exports = require('./dist/multiple-date-picker.module');
+exports.MultipleDatePickerModule = require('./dist/multiple-date-picker.module').MultipleDatePickerModule;
 
 // // exports.MultipleDatePickerModule = require('./dist/multiple-date-picker.module').MultipleDatePickerModule;
 
