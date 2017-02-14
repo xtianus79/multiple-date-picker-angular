@@ -1,6 +1,6 @@
 {
   "name": "multiple-date-picker-a2",
-  "version": "2.4.18",
+  "version": "2.4.19",
   "description": "Multiple Date Picker for Angular* (angular 2+)",
   "main": "index.js",
   "scripts": {
@@ -76,6 +76,6 @@
     "node": ">=0.10.0"
   },
   "dependencies": { 
-    "moment": "^2.X.X"
+    "moment": "^2.17.1"
   }
 }
