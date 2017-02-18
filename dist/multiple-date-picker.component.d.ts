@@ -40,14 +40,13 @@ export declare class MultipleDatePickerComponent implements OnInit, ControlValue
     registerOnTouched(): void;
     _projectScope: any[];
     projectScope2: any[];
-    logMonthChanged(newMonth: any, oldMonth: any): void;
     checkNavigationButtons(): void;
     getDaysOfWeek(): any[];
     getMonthYearToDisplay(): any;
     getYearsForSelect(): any[];
     toggleDay(event: any, day: any): void;
     clearDays(): void;
-    logDays(): void;
+    runGenerate(): void;
     rightClicked(event: any, day: any): void;
     getDayClasses(day: any): string;
     changeMonth(event: any, disable: any, add: any): void;
@@ -55,5 +54,5 @@ export declare class MultipleDatePickerComponent implements OnInit, ControlValue
     isDayOff(day: any): any;
     isSelected(day: any): boolean;
     generate(): void;
-    findArray(day: any): void;
+    findArrayofDays(): void;
 }

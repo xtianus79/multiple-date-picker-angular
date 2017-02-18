@@ -21,8 +21,8 @@ System.register("template", [], function (exports_1, context_1) {
              * The default multiple date picker was orginated from here... styles and structure can be associated
              * from arca-computing https://arca-computing.github.io/MultipleDatePicker/
              */
-            exports_1("DEFAULT_TEMPLATE", DEFAULT_TEMPLATE = "\n    <div class=\"multiple-date-picker\">\n        <div class=\"picker-top-row\">\n            <div class=\"text-center picker-navigate picker-navigate-left-arrow\" [ngClass]=\"{'disabled':disableBackButton}\" (click)=\"changeMonth($event, disableBackButton, -1)\">&lt;</div>\n            <div class=\"text-center picker-month\">\n                {{monthToDisplay}}\n                <span *ngIf=\"yearsForSelect.length < 2\">{{yearToDisplay}}</span>\n            </div>\n            <div class=\"text-center picker-navigate picker-navigate-right-arrow\" [ngClass]=\"{'disabled':disableNextButton}\" (click)=\"changeMonth($event, disableNextButton, 1)\">&gt;</div>\n            <button (click)=\"clearDays()\">Clear Days</button>\n            <button (click)=\"logDays()\">Log Days</button>\n            <button (click)=\"findArray()\">Find Array</button>\n            <button (click)=\"decrement()\">\n            Decrement\n            </button>\n            <button (click)=\"increment()\">\n            Increment\n            </button>\n        </div>\n        <div class=\"picker-days-week-row\">\n            <div class=\"text-center\" *ngFor=\"let weekDays of daysOfWeek\">{{weekDays}}</div>\n        </div>\n        <div class=\"picker-days-row\">\n            <div class=\"text-center picker-day {{getDayClasses(day)}}\" title=\"{{day.title}}\" *ngFor=\"let day of days\" (click)=\"toggleDay($event, day)\" >\n                {{day ? day.mdp.otherMonth && !showDaysOfSurroundingMonths ? '&nbsp;' : day.date.format('D') : ''}}\n            </div>\n        </div>\n    </div>\n    ");
-            exports_1("DEFAULT_STYLES", DEFAULT_STYLES = "\n        .text-center {\n            text-align: center\n        }\n        \n        .multiple-date-picker {\n            -webkit-user-select: none;\n            -moz-user-select: none;\n            -ms-user-select: none;\n            user-select: none\n        }\n        \n        .multiple-date-picker,.picker-days-row,.picker-days-week-row,.picker-top-row {\n            width: 100%\n        }\n        \n        .picker-top-row>div {\n            display: inline-block\n        }\n        \n        .picker-navigate {\n            width: 16.66%\n        }\n        \n        .picker-navigate:hover {\n            cursor: pointer\n        }\n        \n        .picker-navigate.disabled,.picker-navigate.disabled:hover {\n            color: #ddd;\n            cursor: default\n        }\n        \n        .picker-month {\n            width: 66%\n        }\n        \n        .picker-days-row>div,.picker-days-week-row>div {\n            width: 14.28%;\n            display: inline-block\n        }\n        \n        .picker-day,.picker-top-row {\n            padding: 10px 0\n        }\n        \n        .picker-day {\n            background-color: #fff;\n            border: 1px solid #eee;\n            box-sizing: border-box;\n            color: #000\n        }\n        \n        .picker-day.today,.picker-day.today.picker-off,.picker-day.today.picker-off:hover,.picker-day.today.picker-selected,.picker-day.today:hover {\n            color: #00a3ff\n        }\n        \n        .picker-day:not(.picker-off):not(.picker-empty):hover {\n            background-color: #C6000B;\n            color: #fff;\n            cursor: pointer\n        }\n        \n        .picker-day.picker-selected {\n            background-color: #C6000B;\n            color: #fff\n        }\n        \n        .picker-day.picker-off,.picker-day.picker-off:hover {\n            background-color: #eee;\n            color: #bbb;\n            cursor: default\n        }\n        \n        .picker-day.picker-empty,.picker-day.picker-empty:hover {\n            background-color: #fafafa;\n            cursor: default\n        }\n        \n        input {\n              border: 0;\n              border-radius: 3px;\n              height: 30px;\n              max-width: 100px;\n              text-align: center;\n            }\n            ");
+            exports_1("DEFAULT_TEMPLATE", DEFAULT_TEMPLATE = "\n<div class=\"multiple-date-picker\">\n    <div class=\"picker-top-row\">\n        <div class=\"text-center picker-navigate picker-navigate-left-arrow\" [ngClass]=\"{'disabled':disableBackButton}\" (click)=\"changeMonth($event, disableBackButton, -1)\">&lt;</div>\n        <div class=\"text-center picker-month\">\n            {{monthToDisplay}}\n            <span *ngIf=\"yearsForSelect.length < 2\">{{yearToDisplay}}</span>\n        </div>\n        <div class=\"text-center picker-navigate picker-navigate-right-arrow\" [ngClass]=\"{'disabled':disableNextButton}\" (click)=\"changeMonth($event, disableNextButton, 1)\">&gt;</div>\n    </div>\n    <div class=\"picker-days-week-row\">\n        <div class=\"text-center\" *ngFor=\"let weekDays of daysOfWeek\">{{weekDays}}</div>\n    </div>\n    <div class=\"picker-days-row\">\n        <div class=\"text-center picker-day {{getDayClasses(day)}}\" title=\"{{day.title}}\" *ngFor=\"let day of days\" (click)=\"toggleDay($event, day)\" >\n            {{day ? day.mdp.otherMonth && !showDaysOfSurroundingMonths ? '&nbsp;' : day.date.format('D') : ''}}\n        </div>\n    </div>\n</div>\n    ");
+            exports_1("DEFAULT_STYLES", DEFAULT_STYLES = "\n    .text-center {\n        text-align: center\n    }\n    \n    .multiple-date-picker {\n        -webkit-user-select: none;\n        -moz-user-select: none;\n        -ms-user-select: none;\n        user-select: none\n    }\n    \n    .multiple-date-picker,.picker-days-row,.picker-days-week-row,.picker-top-row {\n        width: 100%\n    }\n    \n    .picker-top-row>div {\n        display: inline-block\n    }\n    \n    .picker-navigate {\n        width: 16.66%\n    }\n    \n    .picker-navigate:hover {\n        cursor: pointer\n    }\n    \n    .picker-navigate.disabled,.picker-navigate.disabled:hover {\n        color: #ddd;\n        cursor: default\n    }\n    \n    .picker-month {\n        width: 66%\n    }\n    \n    .picker-days-row>div,.picker-days-week-row>div {\n        width: 14.28%;\n        display: inline-block\n    }\n    \n    .picker-day,.picker-top-row {\n        padding: 10px 0\n    }\n    \n    .picker-day {\n        background-color: #fff;\n        border: 1px solid #eee;\n        box-sizing: border-box;\n        color: #000\n    }\n    \n    .picker-day.today,.picker-day.today.picker-off,.picker-day.today.picker-off:hover,.picker-day.today.picker-selected,.picker-day.today:hover {\n        color: #00a3ff\n    }\n    \n    .picker-day:not(.picker-off):not(.picker-empty):hover {\n        background-color: #C6000B;\n        color: #fff;\n        cursor: pointer\n    }\n    \n    .picker-day.picker-selected {\n        background-color: #C6000B;\n        color: #fff\n    }\n    \n    .picker-day.picker-off,.picker-day.picker-off:hover {\n        background-color: #eee;\n        color: #bbb;\n        cursor: default\n    }\n    \n    .picker-day.picker-empty,.picker-day.picker-empty:hover {\n        background-color: #fafafa;\n        cursor: default\n    }\n    \n    input {\n            border: 0;\n            border-radius: 3px;\n            height: 30px;\n            max-width: 100px;\n            text-align: center;\n        }\n    ");
         }
     };
 });
@@ -65,11 +65,10 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
                 MultipleDatePickerComponent.prototype.ngOnInit = function () {
                     this.generate();
                     this.daysOfWeek = this.getDaysOfWeek();
-                    //console.log('this.sundayFirstDaydddd = ' + this.sundayFirstDay);
                 };
                 MultipleDatePickerComponent.prototype.writeValue = function (value) {
                     var _this = this;
-                    console.log('the value = ' + JSON.stringify(value));
+                    // console.log('the value = ' + JSON.stringify(value));
                     if (value !== undefined) {
                         this.projectScope = value;
                         if (value !== null) {
@@ -99,9 +98,6 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
                     enumerable: true,
                     configurable: true
                 });
-                MultipleDatePickerComponent.prototype.logMonthChanged = function (newMonth, oldMonth) {
-                    alert('new month : ' + moment(newMonth).format('YYYY-M-DD') + ' old month : ' + moment(oldMonth).format('YYYY-M-DD'));
-                }; // future test case shelf for now. regarding change month
                 MultipleDatePickerComponent.prototype.checkNavigationButtons = function () {
                     var today = moment(), previousMonth = moment(this.month).subtract(1, 'month'), nextMonth = moment(this.month).add(1, 'month');
                     this.disableBackButton = this.disableNavigation || (this.disallowBackPastMonths && today.isAfter(previousMonth, 'month'));
@@ -138,7 +134,6 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
                 ;
                 MultipleDatePickerComponent.prototype.toggleDay = function (event, day) {
                     event.preventDefault();
-                    // removed day ? day.mdp.otherMonth && 
                     if (day.mdp.otherMonth && !this.fireEventsForDaysOfSurroundingMonths) {
                         return;
                     }
@@ -152,7 +147,6 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
                     if (day.selectable && !prevented) {
                         day.mdp.selected = !day.mdp.selected;
                         if (day.mdp.selected) {
-                            console.log('this project scope = ' + this.projectScope); // for testing
                             this.projectScope.push(day.date);
                         }
                         else {
@@ -181,8 +175,9 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
                 MultipleDatePickerComponent.prototype.clearDays = function () {
                     this.projectScope = [];
                     this.generate();
+                    // console.log('clearDays was fired off'); // for testing
                 };
-                MultipleDatePickerComponent.prototype.logDays = function () {
+                MultipleDatePickerComponent.prototype.runGenerate = function () {
                     this.generate();
                 }; // remove this and from html
                 MultipleDatePickerComponent.prototype.rightClicked = function (event, day) {
@@ -192,11 +187,8 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
                     }
                 };
                 MultipleDatePickerComponent.prototype.getDayClasses = function (day) {
-                    // this.showDaysOfSurroundingMonths = true;
                     var css = '';
-                    //console.log('this got here ' + day.css)
                     if (day.css && (!day.mdp.otherMonth || this.showDaysOfSurroundingMonths)) {
-                        // console.log('this got here ' + day.css)
                         css += ' ' + day.css;
                     }
                     if (this.cssDaysOfSurroundingMonths && day.mdp.otherMonth) {
@@ -230,17 +222,15 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
                     event.preventDefault();
                     var prevented = false;
                     event.preventDefault = function () {
-                        // console.log('entered into preventDefault *****');
+                        // console.log('entered into preventDefault *****'); // for testing
                         prevented = true;
                     };
                     var monthTo = moment(this.month).add(add, 'month');
                     if (typeof this.monthClick == 'function') {
                         this.monthClick(event, monthTo);
                     }
-                    //this.logMonthChanged(newMonth, oldMonth);
                     if (!prevented) {
                         var oldMonth = moment(this.month);
-                        // console.log('oldMonth = ' + oldMonth + ' newMonth = ' + newMonth + ' this.monthChanged = ' + typeof this.monthChanged); // future test case with logMonthChanged
                         this.month = monthTo;
                         if (typeof this.monthChanged == 'function') {
                             this.monthChanged(this.month, oldMonth);
@@ -273,17 +263,6 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
                 };
                 /*Check if the date is selected*/
                 MultipleDatePickerComponent.prototype.isSelected = function (day) {
-                    // let now = moment();
-                    // let d = day.mdp.today
-                    // console.log('DDDDDDDDDDDDd******** = ' + day.date.isSame(now, 'day'));
-                    // function isSameDay(arr, d) {
-                    //    // arr = this.projectScope;
-                    //    // val = day;
-                    //    return arr.some(dayVal => d === dayVal);
-                    // }
-                    // //console.log('this.projectScope = ' + isSameDay(d));
-                    // return isSameDay(this.projectScope, 'd');
-                    //return this.projectScope.some(isSameDay);
                     return this.projectScope.some(function (d) {
                         return day.date.isSame(d, 'day');
                     });
@@ -321,7 +300,7 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
                             day.title = hlDay.length > 0 ? hlDay[0].title : '';
                         }
                         day.selectable = !_this.isDayOff(day);
-                        console.log('this.sameDaySelect() = ' + _this.isSelected(day));
+                        // console.log('this.sameDaySelect() = ' + this.isSelected(day));
                         day.mdp.selected = _this.isSelected(day);
                         day.mdp.today = day.date.isSame(now, 'day');
                         day.mdp.past = day.date.isBefore(now, 'day');
@@ -329,8 +308,6 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
                         if (!day.date.isSame(_this.month, 'month')) {
                             day.mdp.otherMonth = true;
                         }
-                        // console.log(' and is selected333 ' + JSON.stringify(day));
-                        // console.log('this is day = ' + JSON.stringify(day));
                         return day;
                     };
                     var maxDays = lastDay.diff(previousDay, 'days'), lastDayOfWeek = this.sundayFirstDay ? 6 : 0;
@@ -343,10 +320,9 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
                     this.days = days;
                     this.checkNavigationButtons();
                     this.propagateChange(this.projectScope);
-                    //console.log('this is this.days = ' + JSON.stringify(this.days, null, 4));
                 };
-                MultipleDatePickerComponent.prototype.findArray = function (day) {
-                    console.log('this.projectScope = ' + this.projectScope + ' and is selected ' + day);
+                MultipleDatePickerComponent.prototype.findArrayofDays = function () {
+                    console.log('this.projectScope = ' + this.projectScope);
                 };
                 return MultipleDatePickerComponent;
             }());
@@ -444,7 +420,6 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
             ], MultipleDatePickerComponent.prototype, "_projectScope", void 0);
             MultipleDatePickerComponent = MultipleDatePickerComponent_1 = __decorate([
                 core_1.Component({
-                    //moduleId: module.id,
                     selector: 'multiple-date-picker',
                     template: template_1.DEFAULT_TEMPLATE,
                     styles: [template_1.DEFAULT_STYLES],

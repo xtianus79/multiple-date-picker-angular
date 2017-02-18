@@ -299,7 +299,7 @@ class View_MultipleDatePickerComponent_Host0 extends import2.AppView<any> {
   }
 }
 export const MultipleDatePickerComponentNgFactory:import8.ComponentFactory<import0.MultipleDatePickerComponent> = new import8.ComponentFactory<import0.MultipleDatePickerComponent>('multiple-date-picker',View_MultipleDatePickerComponent_Host0,import0.MultipleDatePickerComponent);
-const styles_MultipleDatePickerComponent:any[] = ['.text-center[_ngcontent-%COMP%] {\n            text-align: center\n        }\n        \n        .multiple-date-picker[_ngcontent-%COMP%] {\n            -webkit-user-select: none;\n            -moz-user-select: none;\n            -ms-user-select: none;\n            user-select: none\n        }\n        \n        .multiple-date-picker[_ngcontent-%COMP%], .picker-days-row[_ngcontent-%COMP%], .picker-days-week-row[_ngcontent-%COMP%], .picker-top-row[_ngcontent-%COMP%] {\n            width: 100%\n        }\n        \n        .picker-top-row[_ngcontent-%COMP%] > div[_ngcontent-%COMP%] {\n            display: inline-block\n        }\n        \n        .picker-navigate[_ngcontent-%COMP%] {\n            width: 16.66%\n        }\n        \n        .picker-navigate[_ngcontent-%COMP%]:hover {\n            cursor: pointer\n        }\n        \n        .picker-navigate.disabled[_ngcontent-%COMP%], .picker-navigate.disabled[_ngcontent-%COMP%]:hover {\n            color: #ddd;\n            cursor: default\n        }\n        \n        .picker-month[_ngcontent-%COMP%] {\n            width: 66%\n        }\n        \n        .picker-days-row[_ngcontent-%COMP%] > div[_ngcontent-%COMP%], .picker-days-week-row[_ngcontent-%COMP%] > div[_ngcontent-%COMP%] {\n            width: 14.28%;\n            display: inline-block\n        }\n        \n        .picker-day[_ngcontent-%COMP%], .picker-top-row[_ngcontent-%COMP%] {\n            padding: 10px 0\n        }\n        \n        .picker-day[_ngcontent-%COMP%] {\n            background-color: #fff;\n            border: 1px solid #eee;\n            box-sizing: border-box;\n            color: #000\n        }\n        \n        .picker-day.today[_ngcontent-%COMP%], .picker-day.today.picker-off[_ngcontent-%COMP%], .picker-day.today.picker-off[_ngcontent-%COMP%]:hover, .picker-day.today.picker-selected[_ngcontent-%COMP%], .picker-day.today[_ngcontent-%COMP%]:hover {\n            color: #00a3ff\n        }\n        \n        .picker-day[_ngcontent-%COMP%]:not(.picker-off):not(.picker-empty):hover {\n            background-color: #C6000B;\n            color: #fff;\n            cursor: pointer\n        }\n        \n        .picker-day.picker-selected[_ngcontent-%COMP%] {\n            background-color: #C6000B;\n            color: #fff\n        }\n        \n        .picker-day.picker-off[_ngcontent-%COMP%], .picker-day.picker-off[_ngcontent-%COMP%]:hover {\n            background-color: #eee;\n            color: #bbb;\n            cursor: default\n        }\n        \n        .picker-day.picker-empty[_ngcontent-%COMP%], .picker-day.picker-empty[_ngcontent-%COMP%]:hover {\n            background-color: #fafafa;\n            cursor: default\n        }\n        \n        input[_ngcontent-%COMP%] {\n              border: 0;\n              border-radius: 3px;\n              height: 30px;\n              max-width: 100px;\n              text-align: center;\n            }'];
+const styles_MultipleDatePickerComponent:any[] = ['.text-center[_ngcontent-%COMP%] {\n        text-align: center\n    }\n    \n    .multiple-date-picker[_ngcontent-%COMP%] {\n        -webkit-user-select: none;\n        -moz-user-select: none;\n        -ms-user-select: none;\n        user-select: none\n    }\n    \n    .multiple-date-picker[_ngcontent-%COMP%], .picker-days-row[_ngcontent-%COMP%], .picker-days-week-row[_ngcontent-%COMP%], .picker-top-row[_ngcontent-%COMP%] {\n        width: 100%\n    }\n    \n    .picker-top-row[_ngcontent-%COMP%] > div[_ngcontent-%COMP%] {\n        display: inline-block\n    }\n    \n    .picker-navigate[_ngcontent-%COMP%] {\n        width: 16.66%\n    }\n    \n    .picker-navigate[_ngcontent-%COMP%]:hover {\n        cursor: pointer\n    }\n    \n    .picker-navigate.disabled[_ngcontent-%COMP%], .picker-navigate.disabled[_ngcontent-%COMP%]:hover {\n        color: #ddd;\n        cursor: default\n    }\n    \n    .picker-month[_ngcontent-%COMP%] {\n        width: 66%\n    }\n    \n    .picker-days-row[_ngcontent-%COMP%] > div[_ngcontent-%COMP%], .picker-days-week-row[_ngcontent-%COMP%] > div[_ngcontent-%COMP%] {\n        width: 14.28%;\n        display: inline-block\n    }\n    \n    .picker-day[_ngcontent-%COMP%], .picker-top-row[_ngcontent-%COMP%] {\n        padding: 10px 0\n    }\n    \n    .picker-day[_ngcontent-%COMP%] {\n        background-color: #fff;\n        border: 1px solid #eee;\n        box-sizing: border-box;\n        color: #000\n    }\n    \n    .picker-day.today[_ngcontent-%COMP%], .picker-day.today.picker-off[_ngcontent-%COMP%], .picker-day.today.picker-off[_ngcontent-%COMP%]:hover, .picker-day.today.picker-selected[_ngcontent-%COMP%], .picker-day.today[_ngcontent-%COMP%]:hover {\n        color: #00a3ff\n    }\n    \n    .picker-day[_ngcontent-%COMP%]:not(.picker-off):not(.picker-empty):hover {\n        background-color: #C6000B;\n        color: #fff;\n        cursor: pointer\n    }\n    \n    .picker-day.picker-selected[_ngcontent-%COMP%] {\n        background-color: #C6000B;\n        color: #fff\n    }\n    \n    .picker-day.picker-off[_ngcontent-%COMP%], .picker-day.picker-off[_ngcontent-%COMP%]:hover {\n        background-color: #eee;\n        color: #bbb;\n        cursor: default\n    }\n    \n    .picker-day.picker-empty[_ngcontent-%COMP%], .picker-day.picker-empty[_ngcontent-%COMP%]:hover {\n        background-color: #fafafa;\n        cursor: default\n    }\n    \n    input[_ngcontent-%COMP%] {\n            border: 0;\n            border-radius: 3px;\n            height: 30px;\n            max-width: 100px;\n            text-align: center;\n        }'];
 class View_MultipleDatePickerComponent1 extends import2.AppView<any> {
   _el_0:any;
   _text_1:any;
@@ -392,7 +392,7 @@ class View_MultipleDatePickerComponent3 extends import2.AppView<any> {
       this.renderer.setElementProperty(this._el_0,'title',currVal_3);
       this._expr_3 = currVal_3;
     }
-    const currVal_4:any = import3.inlineInterpolate(1,'\n                ',(this.context.$implicit? ((this.context.$implicit.mdp.otherMonth && !this.parentView.context.showDaysOfSurroundingMonths)? ' ': this.context.$implicit.date.format('D')): ''),'\n            ');
+    const currVal_4:any = import3.inlineInterpolate(1,'\n            ',(this.context.$implicit? ((this.context.$implicit.mdp.otherMonth && !this.parentView.context.showDaysOfSurroundingMonths)? ' ': this.context.$implicit.date.format('D')): ''),'\n        ');
     if (import3.checkBinding(throwOnChange,this._expr_4,currVal_4)) {
       this.renderer.setText(this._text_1,currVal_4);
       this._expr_4 = currVal_4;
@@ -434,115 +434,80 @@ export class View_MultipleDatePickerComponent0 extends import2.AppView<import0.M
   _NgClass_13_3:import11.Wrapper_NgClass;
   _text_14:any;
   _text_15:any;
-  _el_16:any;
-  _text_17:any;
+  _text_16:any;
+  _el_17:any;
   _text_18:any;
-  _el_19:any;
+  _anchor_19:any;
+  /*private*/ _vc_19:import10.ViewContainer;
+  _TemplateRef_19_5:any;
+  _NgFor_19_6:import13.Wrapper_NgFor;
   _text_20:any;
   _text_21:any;
   _el_22:any;
   _text_23:any;
-  _text_24:any;
-  _el_25:any;
+  _anchor_24:any;
+  /*private*/ _vc_24:import10.ViewContainer;
+  _TemplateRef_24_5:any;
+  _NgFor_24_6:import13.Wrapper_NgFor;
+  _text_25:any;
   _text_26:any;
   _text_27:any;
-  _el_28:any;
-  _text_29:any;
-  _text_30:any;
-  _text_31:any;
-  _el_32:any;
-  _text_33:any;
-  _anchor_34:any;
-  /*private*/ _vc_34:import10.ViewContainer;
-  _TemplateRef_34_5:any;
-  _NgFor_34_6:import13.Wrapper_NgFor;
-  _text_35:any;
-  _text_36:any;
-  _el_37:any;
-  _text_38:any;
-  _anchor_39:any;
-  /*private*/ _vc_39:import10.ViewContainer;
-  _TemplateRef_39_5:any;
-  _NgFor_39_6:import13.Wrapper_NgFor;
-  _text_40:any;
-  _text_41:any;
-  _text_42:any;
-  _map_54:any;
-  /*private*/ _expr_55:any;
-  _map_56:any;
+  _map_39:any;
+  /*private*/ _expr_40:any;
+  _map_41:any;
   constructor(viewUtils:import3.ViewUtils,parentView:import2.AppView<any>,parentIndex:number,parentElement:any) {
     super(View_MultipleDatePickerComponent0,renderType_MultipleDatePickerComponent,import6.ViewType.COMPONENT,viewUtils,parentView,parentIndex,parentElement,import7.ChangeDetectorStatus.CheckAlways);
-    this._map_54 = import3.pureProxy1((p0:any):{[key: string]:any} => {
+    this._map_39 = import3.pureProxy1((p0:any):{[key: string]:any} => {
       return {disabled: p0};
     });
-    this._expr_55 = import1.UNINITIALIZED;
-    this._map_56 = import3.pureProxy1((p0:any):{[key: string]:any} => {
+    this._expr_40 = import1.UNINITIALIZED;
+    this._map_41 = import3.pureProxy1((p0:any):{[key: string]:any} => {
       return {disabled: p0};
     });
   }
   createInternal(rootSelector:string):import8.ComponentRef<any> {
     const parentRenderNode:any = this.renderer.createViewRoot(this.parentElement);
-    this._text_0 = this.renderer.createText(parentRenderNode,'\n    ',(null as any));
+    this._text_0 = this.renderer.createText(parentRenderNode,'\n',(null as any));
     this._el_1 = import3.createRenderElement(this.renderer,parentRenderNode,'div',new import3.InlineArray2(2,'class','multiple-date-picker'),(null as any));
-    this._text_2 = this.renderer.createText(this._el_1,'\n        ',(null as any));
+    this._text_2 = this.renderer.createText(this._el_1,'\n    ',(null as any));
     this._el_3 = import3.createRenderElement(this.renderer,this._el_1,'div',new import3.InlineArray2(2,'class','picker-top-row'),(null as any));
-    this._text_4 = this.renderer.createText(this._el_3,'\n            ',(null as any));
+    this._text_4 = this.renderer.createText(this._el_3,'\n        ',(null as any));
     this._el_5 = import3.createRenderElement(this.renderer,this._el_3,'div',new import3.InlineArray2(2,'class','text-center picker-navigate picker-navigate-left-arrow'),(null as any));
     this._NgClass_5_3 = new import11.Wrapper_NgClass(this.parentView.injectorGet(import14.IterableDiffers,this.parentIndex),this.parentView.injectorGet(import15.KeyValueDiffers,this.parentIndex),new import16.ElementRef(this._el_5),this.renderer);
     this._text_6 = this.renderer.createText(this._el_5,'<',(null as any));
-    this._text_7 = this.renderer.createText(this._el_3,'\n            ',(null as any));
+    this._text_7 = this.renderer.createText(this._el_3,'\n        ',(null as any));
     this._el_8 = import3.createRenderElement(this.renderer,this._el_3,'div',new import3.InlineArray2(2,'class','text-center picker-month'),(null as any));
     this._text_9 = this.renderer.createText(this._el_8,'',(null as any));
     this._anchor_10 = this.renderer.createTemplateAnchor(this._el_8,(null as any));
     this._vc_10 = new import10.ViewContainer(10,8,this,this._anchor_10);
     this._TemplateRef_10_5 = new import17.TemplateRef_(this,10,this._anchor_10);
     this._NgIf_10_6 = new import12.Wrapper_NgIf(this._vc_10.vcRef,this._TemplateRef_10_5);
-    this._text_11 = this.renderer.createText(this._el_8,'\n            ',(null as any));
-    this._text_12 = this.renderer.createText(this._el_3,'\n            ',(null as any));
+    this._text_11 = this.renderer.createText(this._el_8,'\n        ',(null as any));
+    this._text_12 = this.renderer.createText(this._el_3,'\n        ',(null as any));
     this._el_13 = import3.createRenderElement(this.renderer,this._el_3,'div',new import3.InlineArray2(2,'class','text-center picker-navigate picker-navigate-right-arrow'),(null as any));
     this._NgClass_13_3 = new import11.Wrapper_NgClass(this.parentView.injectorGet(import14.IterableDiffers,this.parentIndex),this.parentView.injectorGet(import15.KeyValueDiffers,this.parentIndex),new import16.ElementRef(this._el_13),this.renderer);
     this._text_14 = this.renderer.createText(this._el_13,'>',(null as any));
-    this._text_15 = this.renderer.createText(this._el_3,'\n            ',(null as any));
-    this._el_16 = import3.createRenderElement(this.renderer,this._el_3,'button',import3.EMPTY_INLINE_ARRAY,(null as any));
-    this._text_17 = this.renderer.createText(this._el_16,'Clear Days',(null as any));
-    this._text_18 = this.renderer.createText(this._el_3,'\n            ',(null as any));
-    this._el_19 = import3.createRenderElement(this.renderer,this._el_3,'button',import3.EMPTY_INLINE_ARRAY,(null as any));
-    this._text_20 = this.renderer.createText(this._el_19,'Log Days',(null as any));
-    this._text_21 = this.renderer.createText(this._el_3,'\n            ',(null as any));
-    this._el_22 = import3.createRenderElement(this.renderer,this._el_3,'button',import3.EMPTY_INLINE_ARRAY,(null as any));
-    this._text_23 = this.renderer.createText(this._el_22,'Find Array',(null as any));
-    this._text_24 = this.renderer.createText(this._el_3,'\n            ',(null as any));
-    this._el_25 = import3.createRenderElement(this.renderer,this._el_3,'button',import3.EMPTY_INLINE_ARRAY,(null as any));
-    this._text_26 = this.renderer.createText(this._el_25,'\n            Decrement\n            ',(null as any));
-    this._text_27 = this.renderer.createText(this._el_3,'\n            ',(null as any));
-    this._el_28 = import3.createRenderElement(this.renderer,this._el_3,'button',import3.EMPTY_INLINE_ARRAY,(null as any));
-    this._text_29 = this.renderer.createText(this._el_28,'\n            Increment\n            ',(null as any));
-    this._text_30 = this.renderer.createText(this._el_3,'\n        ',(null as any));
-    this._text_31 = this.renderer.createText(this._el_1,'\n        ',(null as any));
-    this._el_32 = import3.createRenderElement(this.renderer,this._el_1,'div',new import3.InlineArray2(2,'class','picker-days-week-row'),(null as any));
-    this._text_33 = this.renderer.createText(this._el_32,'\n            ',(null as any));
-    this._anchor_34 = this.renderer.createTemplateAnchor(this._el_32,(null as any));
-    this._vc_34 = new import10.ViewContainer(34,32,this,this._anchor_34);
-    this._TemplateRef_34_5 = new import17.TemplateRef_(this,34,this._anchor_34);
-    this._NgFor_34_6 = new import13.Wrapper_NgFor(this._vc_34.vcRef,this._TemplateRef_34_5,this.parentView.injectorGet(import14.IterableDiffers,this.parentIndex),this.ref);
-    this._text_35 = this.renderer.createText(this._el_32,'\n        ',(null as any));
-    this._text_36 = this.renderer.createText(this._el_1,'\n        ',(null as any));
-    this._el_37 = import3.createRenderElement(this.renderer,this._el_1,'div',new import3.InlineArray2(2,'class','picker-days-row'),(null as any));
-    this._text_38 = this.renderer.createText(this._el_37,'\n            ',(null as any));
-    this._anchor_39 = this.renderer.createTemplateAnchor(this._el_37,(null as any));
-    this._vc_39 = new import10.ViewContainer(39,37,this,this._anchor_39);
-    this._TemplateRef_39_5 = new import17.TemplateRef_(this,39,this._anchor_39);
-    this._NgFor_39_6 = new import13.Wrapper_NgFor(this._vc_39.vcRef,this._TemplateRef_39_5,this.parentView.injectorGet(import14.IterableDiffers,this.parentIndex),this.ref);
-    this._text_40 = this.renderer.createText(this._el_37,'\n        ',(null as any));
-    this._text_41 = this.renderer.createText(this._el_1,'\n    ',(null as any));
-    this._text_42 = this.renderer.createText(parentRenderNode,'\n    ',(null as any));
+    this._text_15 = this.renderer.createText(this._el_3,'\n    ',(null as any));
+    this._text_16 = this.renderer.createText(this._el_1,'\n    ',(null as any));
+    this._el_17 = import3.createRenderElement(this.renderer,this._el_1,'div',new import3.InlineArray2(2,'class','picker-days-week-row'),(null as any));
+    this._text_18 = this.renderer.createText(this._el_17,'\n        ',(null as any));
+    this._anchor_19 = this.renderer.createTemplateAnchor(this._el_17,(null as any));
+    this._vc_19 = new import10.ViewContainer(19,17,this,this._anchor_19);
+    this._TemplateRef_19_5 = new import17.TemplateRef_(this,19,this._anchor_19);
+    this._NgFor_19_6 = new import13.Wrapper_NgFor(this._vc_19.vcRef,this._TemplateRef_19_5,this.parentView.injectorGet(import14.IterableDiffers,this.parentIndex),this.ref);
+    this._text_20 = this.renderer.createText(this._el_17,'\n    ',(null as any));
+    this._text_21 = this.renderer.createText(this._el_1,'\n    ',(null as any));
+    this._el_22 = import3.createRenderElement(this.renderer,this._el_1,'div',new import3.InlineArray2(2,'class','picker-days-row'),(null as any));
+    this._text_23 = this.renderer.createText(this._el_22,'\n        ',(null as any));
+    this._anchor_24 = this.renderer.createTemplateAnchor(this._el_22,(null as any));
+    this._vc_24 = new import10.ViewContainer(24,22,this,this._anchor_24);
+    this._TemplateRef_24_5 = new import17.TemplateRef_(this,24,this._anchor_24);
+    this._NgFor_24_6 = new import13.Wrapper_NgFor(this._vc_24.vcRef,this._TemplateRef_24_5,this.parentView.injectorGet(import14.IterableDiffers,this.parentIndex),this.ref);
+    this._text_25 = this.renderer.createText(this._el_22,'\n    ',(null as any));
+    this._text_26 = this.renderer.createText(this._el_1,'\n',(null as any));
+    this._text_27 = this.renderer.createText(parentRenderNode,'\n    ',(null as any));
     var disposable_0:Function = import3.subscribeToRenderElement(this,this._el_5,new import3.InlineArray2(2,'click',(null as any)),this.eventHandler(this.handleEvent_5));
     var disposable_1:Function = import3.subscribeToRenderElement(this,this._el_13,new import3.InlineArray2(2,'click',(null as any)),this.eventHandler(this.handleEvent_13));
-    var disposable_2:Function = import3.subscribeToRenderElement(this,this._el_16,new import3.InlineArray2(2,'click',(null as any)),this.eventHandler(this.handleEvent_16));
-    var disposable_3:Function = import3.subscribeToRenderElement(this,this._el_19,new import3.InlineArray2(2,'click',(null as any)),this.eventHandler(this.handleEvent_19));
-    var disposable_4:Function = import3.subscribeToRenderElement(this,this._el_22,new import3.InlineArray2(2,'click',(null as any)),this.eventHandler(this.handleEvent_22));
-    var disposable_5:Function = import3.subscribeToRenderElement(this,this._el_25,new import3.InlineArray2(2,'click',(null as any)),this.eventHandler(this.handleEvent_25));
-    var disposable_6:Function = import3.subscribeToRenderElement(this,this._el_28,new import3.InlineArray2(2,'click',(null as any)),this.eventHandler(this.handleEvent_28));
     this.init((null as any),((<any>this.renderer).directRenderer? (null as any): [
       this._text_0,
       this._el_1,
@@ -560,42 +525,22 @@ export class View_MultipleDatePickerComponent0 extends import2.AppView<import0.M
       this._el_13,
       this._text_14,
       this._text_15,
-      this._el_16,
-      this._text_17,
+      this._text_16,
+      this._el_17,
       this._text_18,
-      this._el_19,
+      this._anchor_19,
       this._text_20,
       this._text_21,
       this._el_22,
       this._text_23,
-      this._text_24,
-      this._el_25,
+      this._anchor_24,
+      this._text_25,
       this._text_26,
-      this._text_27,
-      this._el_28,
-      this._text_29,
-      this._text_30,
-      this._text_31,
-      this._el_32,
-      this._text_33,
-      this._anchor_34,
-      this._text_35,
-      this._text_36,
-      this._el_37,
-      this._text_38,
-      this._anchor_39,
-      this._text_40,
-      this._text_41,
-      this._text_42
+      this._text_27
     ]
     ),[
       disposable_0,
-      disposable_1,
-      disposable_2,
-      disposable_3,
-      disposable_4,
-      disposable_5,
-      disposable_6
+      disposable_1
     ]
     );
     return (null as any);
@@ -605,16 +550,16 @@ export class View_MultipleDatePickerComponent0 extends import2.AppView<import0.M
     if (((token === import17.TemplateRef) && (10 === requestNodeIndex))) { return this._TemplateRef_10_5; }
     if (((token === import19.NgIf) && (10 === requestNodeIndex))) { return this._NgIf_10_6.context; }
     if (((token === import18.NgClass) && ((13 <= requestNodeIndex) && (requestNodeIndex <= 14)))) { return this._NgClass_13_3.context; }
-    if (((token === import17.TemplateRef) && (34 === requestNodeIndex))) { return this._TemplateRef_34_5; }
-    if (((token === import20.NgFor) && (34 === requestNodeIndex))) { return this._NgFor_34_6.context; }
-    if (((token === import17.TemplateRef) && (39 === requestNodeIndex))) { return this._TemplateRef_39_5; }
-    if (((token === import20.NgFor) && (39 === requestNodeIndex))) { return this._NgFor_39_6.context; }
+    if (((token === import17.TemplateRef) && (19 === requestNodeIndex))) { return this._TemplateRef_19_5; }
+    if (((token === import20.NgFor) && (19 === requestNodeIndex))) { return this._NgFor_19_6.context; }
+    if (((token === import17.TemplateRef) && (24 === requestNodeIndex))) { return this._TemplateRef_24_5; }
+    if (((token === import20.NgFor) && (24 === requestNodeIndex))) { return this._NgFor_24_6.context; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
     const currVal_5_0_0:any = 'text-center picker-navigate picker-navigate-left-arrow';
     this._NgClass_5_3.check_klass(currVal_5_0_0,throwOnChange,false);
-    const currVal_5_0_1:any = this._map_54(this.context.disableBackButton);
+    const currVal_5_0_1:any = this._map_39(this.context.disableBackButton);
     this._NgClass_5_3.check_ngClass(currVal_5_0_1,throwOnChange,false);
     this._NgClass_5_3.ngDoCheck(this,this._el_5,throwOnChange);
     const currVal_10_0_0:any = (this.context.yearsForSelect.length < 2);
@@ -622,33 +567,33 @@ export class View_MultipleDatePickerComponent0 extends import2.AppView<import0.M
     this._NgIf_10_6.ngDoCheck(this,this._anchor_10,throwOnChange);
     const currVal_13_0_0:any = 'text-center picker-navigate picker-navigate-right-arrow';
     this._NgClass_13_3.check_klass(currVal_13_0_0,throwOnChange,false);
-    const currVal_13_0_1:any = this._map_56(this.context.disableNextButton);
+    const currVal_13_0_1:any = this._map_41(this.context.disableNextButton);
     this._NgClass_13_3.check_ngClass(currVal_13_0_1,throwOnChange,false);
     this._NgClass_13_3.ngDoCheck(this,this._el_13,throwOnChange);
-    const currVal_34_0_0:any = this.context.daysOfWeek;
-    this._NgFor_34_6.check_ngForOf(currVal_34_0_0,throwOnChange,false);
-    this._NgFor_34_6.ngDoCheck(this,this._anchor_34,throwOnChange);
-    const currVal_39_0_0:any = this.context.days;
-    this._NgFor_39_6.check_ngForOf(currVal_39_0_0,throwOnChange,false);
-    this._NgFor_39_6.ngDoCheck(this,this._anchor_39,throwOnChange);
+    const currVal_19_0_0:any = this.context.daysOfWeek;
+    this._NgFor_19_6.check_ngForOf(currVal_19_0_0,throwOnChange,false);
+    this._NgFor_19_6.ngDoCheck(this,this._anchor_19,throwOnChange);
+    const currVal_24_0_0:any = this.context.days;
+    this._NgFor_24_6.check_ngForOf(currVal_24_0_0,throwOnChange,false);
+    this._NgFor_24_6.ngDoCheck(this,this._anchor_24,throwOnChange);
     this._vc_10.detectChangesInNestedViews(throwOnChange);
-    this._vc_34.detectChangesInNestedViews(throwOnChange);
-    this._vc_39.detectChangesInNestedViews(throwOnChange);
-    const currVal_55:any = import3.inlineInterpolate(1,'\n                ',this.context.monthToDisplay,'\n                ');
-    if (import3.checkBinding(throwOnChange,this._expr_55,currVal_55)) {
-      this.renderer.setText(this._text_9,currVal_55);
-      this._expr_55 = currVal_55;
+    this._vc_19.detectChangesInNestedViews(throwOnChange);
+    this._vc_24.detectChangesInNestedViews(throwOnChange);
+    const currVal_40:any = import3.inlineInterpolate(1,'\n            ',this.context.monthToDisplay,'\n            ');
+    if (import3.checkBinding(throwOnChange,this._expr_40,currVal_40)) {
+      this.renderer.setText(this._text_9,currVal_40);
+      this._expr_40 = currVal_40;
     }
   }
   destroyInternal():void {
     this._vc_10.destroyNestedViews();
-    this._vc_34.destroyNestedViews();
-    this._vc_39.destroyNestedViews();
+    this._vc_19.destroyNestedViews();
+    this._vc_24.destroyNestedViews();
   }
   createEmbeddedViewInternal(nodeIndex:number):import2.AppView<any> {
     if ((nodeIndex == 10)) { return new View_MultipleDatePickerComponent1(this.viewUtils,this,10,this._anchor_10,this._vc_10); }
-    if ((nodeIndex == 34)) { return new View_MultipleDatePickerComponent2(this.viewUtils,this,34,this._anchor_34,this._vc_34); }
-    if ((nodeIndex == 39)) { return new View_MultipleDatePickerComponent3(this.viewUtils,this,39,this._anchor_39,this._vc_39); }
+    if ((nodeIndex == 19)) { return new View_MultipleDatePickerComponent2(this.viewUtils,this,19,this._anchor_19,this._vc_19); }
+    if ((nodeIndex == 24)) { return new View_MultipleDatePickerComponent3(this.viewUtils,this,24,this._anchor_24,this._vc_24); }
     return (null as any);
   }
   handleEvent_5(eventName:string,$event:any):boolean {
@@ -665,51 +610,6 @@ export class View_MultipleDatePickerComponent0 extends import2.AppView<import0.M
     var result:boolean = true;
     if ((eventName == 'click')) {
       const pd_sub_0:any = ((<any>this.context.changeMonth($event,this.context.disableNextButton,1)) !== false);
-      result = (pd_sub_0 && result);
-    }
-    return result;
-  }
-  handleEvent_16(eventName:string,$event:any):boolean {
-    this.markPathToRootAsCheckOnce();
-    var result:boolean = true;
-    if ((eventName == 'click')) {
-      const pd_sub_0:any = ((<any>this.context.clearDays()) !== false);
-      result = (pd_sub_0 && result);
-    }
-    return result;
-  }
-  handleEvent_19(eventName:string,$event:any):boolean {
-    this.markPathToRootAsCheckOnce();
-    var result:boolean = true;
-    if ((eventName == 'click')) {
-      const pd_sub_0:any = ((<any>this.context.logDays()) !== false);
-      result = (pd_sub_0 && result);
-    }
-    return result;
-  }
-  handleEvent_22(eventName:string,$event:any):boolean {
-    this.markPathToRootAsCheckOnce();
-    var result:boolean = true;
-    if ((eventName == 'click')) {
-      const pd_sub_0:any = ((<any>this.context.findArray()) !== false);
-      result = (pd_sub_0 && result);
-    }
-    return result;
-  }
-  handleEvent_25(eventName:string,$event:any):boolean {
-    this.markPathToRootAsCheckOnce();
-    var result:boolean = true;
-    if ((eventName == 'click')) {
-      const pd_sub_0:any = ((<any>this.context.decrement()) !== false);
-      result = (pd_sub_0 && result);
-    }
-    return result;
-  }
-  handleEvent_28(eventName:string,$event:any):boolean {
-    this.markPathToRootAsCheckOnce();
-    var result:boolean = true;
-    if ((eventName == 'click')) {
-      const pd_sub_0:any = ((<any>this.context.increment()) !== false);
       result = (pd_sub_0 && result);
     }
     return result;
