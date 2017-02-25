@@ -15,6 +15,7 @@ var moment = require("moment/moment");
 var MultipleDatePickerComponent = MultipleDatePickerComponent_1 = (function () {
     function MultipleDatePickerComponent() {
         this.cssDaysOfSurroundingMonths = this.cssDaysOfSurroundingMonths || 'picker-empty';
+        this.arrow = 0;
         this.month = this.month || moment().startOf('day');
         this.projectScope = [];
         this.days = [];
@@ -30,6 +31,15 @@ var MultipleDatePickerComponent = MultipleDatePickerComponent_1 = (function () {
     MultipleDatePickerComponent.prototype.ngOnInit = function () {
         this.generate();
         this.daysOfWeek = this.getDaysOfWeek();
+        this.arrowSelected();
+    };
+    MultipleDatePickerComponent.prototype.arrowSelected = function () {
+        if (this.matIcons) {
+            return this.arrow = 1;
+        }
+        else if (this.fontAwesome) {
+            return this.arrow = 2;
+        }
     };
     MultipleDatePickerComponent.prototype.writeValue = function (value) {
         var _this = this;
@@ -314,6 +324,14 @@ __decorate([
     core_1.Input(),
     __metadata("design:type", Object)
 ], MultipleDatePickerComponent.prototype, "monthChanged", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], MultipleDatePickerComponent.prototype, "fontAwesome", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], MultipleDatePickerComponent.prototype, "matIcons", void 0);
 __decorate([
     core_1.Input(),
     __metadata("design:type", String)

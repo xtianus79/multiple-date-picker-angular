@@ -5,13 +5,22 @@
 
 export const DEFAULT_TEMPLATE = `
 <div class="multiple-date-picker">
-    <div class="picker-top-row">
-        <div class="text-center picker-navigate picker-navigate-left-arrow" [ngClass]="{'disabled':disableBackButton}" (click)="changeMonth($event, disableBackButton, -1)">&lt;</div>
+    <div class="picker-top-row" [ngSwitch]="arrow">
+        <div class="text-center picker-navigate picker-navigate-left-arrow" id="button" [ngClass]="{'disabled':disableBackButton}" (click)="changeMonth($event, disableBackButton, -1)">
+            <p *ngSwitchDefault>&lt;</p>
+            <p *ngSwitchCase="1"><i class="material-icons">keyboard_arrow_left</i></p>
+            <p *ngSwitchCase="2"><i class="fa fa-angle-left" aria-hidden="true"></i></p>
+        </div>
         <div class="text-center picker-month">
             {{monthToDisplay}}
             <span *ngIf="yearsForSelect.length < 2">{{yearToDisplay}}</span>
         </div>
-        <div class="text-center picker-navigate picker-navigate-right-arrow" [ngClass]="{'disabled':disableNextButton}" (click)="changeMonth($event, disableNextButton, 1)">&gt;</div>
+        <div class="text-center picker-navigate picker-navigate-right-arrow" [ngClass]="{'disabled':disableNextButton}" (click)="changeMonth($event, disableNextButton, 1)">
+            <p *ngSwitchDefault>&gt;</p>
+            <p *ngSwitchCase="1"><i class="material-icons">keyboard_arrow_right</i></p>
+            <p *ngSwitchCase="2"><i class="fa fa-angle-right" aria-hidden="true"></i></p>
+        </div>
+            
     </div>
     <div class="picker-days-week-row">
         <div class="text-center" *ngFor="let weekDays of daysOfWeek">{{weekDays}}</div>
@@ -45,7 +54,7 @@ export const DEFAULT_STYLES = `
     }
     
     .picker-navigate {
-        width: 16.66%
+        width: 16.5%
     }
     
     .picker-navigate:hover {
@@ -58,7 +67,7 @@ export const DEFAULT_STYLES = `
     }
     
     .picker-month {
-        width: 66%
+        width: 65%
     }
     
     .picker-days-row>div,.picker-days-week-row>div {

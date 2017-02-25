@@ -21,8 +21,8 @@ System.register("template", [], function (exports_1, context_1) {
              * The default multiple date picker was orginated from here... styles and structure can be associated
              * from arca-computing https://arca-computing.github.io/MultipleDatePicker/
              */
-            exports_1("DEFAULT_TEMPLATE", DEFAULT_TEMPLATE = "\n<div class=\"multiple-date-picker\">\n    <div class=\"picker-top-row\">\n        <div class=\"text-center picker-navigate picker-navigate-left-arrow\" [ngClass]=\"{'disabled':disableBackButton}\" (click)=\"changeMonth($event, disableBackButton, -1)\">&lt;</div>\n        <div class=\"text-center picker-month\">\n            {{monthToDisplay}}\n            <span *ngIf=\"yearsForSelect.length < 2\">{{yearToDisplay}}</span>\n        </div>\n        <div class=\"text-center picker-navigate picker-navigate-right-arrow\" [ngClass]=\"{'disabled':disableNextButton}\" (click)=\"changeMonth($event, disableNextButton, 1)\">&gt;</div>\n    </div>\n    <div class=\"picker-days-week-row\">\n        <div class=\"text-center\" *ngFor=\"let weekDays of daysOfWeek\">{{weekDays}}</div>\n    </div>\n    <div class=\"picker-days-row\">\n        <div class=\"text-center picker-day {{getDayClasses(day)}}\" title=\"{{day.title}}\" *ngFor=\"let day of days\" (click)=\"toggleDay($event, day)\" >\n            {{day ? day.mdp.otherMonth && !showDaysOfSurroundingMonths ? '&nbsp;' : day.date.format('D') : ''}}\n        </div>\n    </div>\n</div>\n    ");
-            exports_1("DEFAULT_STYLES", DEFAULT_STYLES = "\n    .text-center {\n        text-align: center\n    }\n    \n    .multiple-date-picker {\n        -webkit-user-select: none;\n        -moz-user-select: none;\n        -ms-user-select: none;\n        user-select: none\n    }\n    \n    .multiple-date-picker,.picker-days-row,.picker-days-week-row,.picker-top-row {\n        width: 100%\n    }\n    \n    .picker-top-row>div {\n        display: inline-block\n    }\n    \n    .picker-navigate {\n        width: 16.66%\n    }\n    \n    .picker-navigate:hover {\n        cursor: pointer\n    }\n    \n    .picker-navigate.disabled,.picker-navigate.disabled:hover {\n        color: #ddd;\n        cursor: default\n    }\n    \n    .picker-month {\n        width: 66%\n    }\n    \n    .picker-days-row>div,.picker-days-week-row>div {\n        width: 14.28%;\n        display: inline-block\n    }\n    \n    .picker-day,.picker-top-row {\n        padding: 10px 0\n    }\n    \n    .picker-day {\n        background-color: #fff;\n        border: 1px solid #eee;\n        box-sizing: border-box;\n        color: #000\n    }\n    \n    .picker-day.today,.picker-day.today.picker-off,.picker-day.today.picker-off:hover,.picker-day.today.picker-selected,.picker-day.today:hover {\n        color: #00a3ff\n    }\n    \n    .picker-day:not(.picker-off):not(.picker-empty):hover {\n        background-color: #C6000B;\n        color: #fff;\n        cursor: pointer\n    }\n    \n    .picker-day.picker-selected {\n        background-color: #C6000B;\n        color: #fff\n    }\n    \n    .picker-day.picker-off,.picker-day.picker-off:hover {\n        background-color: #eee;\n        color: #bbb;\n        cursor: default\n    }\n    \n    .picker-day.picker-empty,.picker-day.picker-empty:hover {\n        background-color: #fafafa;\n        cursor: default\n    }\n    \n    input {\n            border: 0;\n            border-radius: 3px;\n            height: 30px;\n            max-width: 100px;\n            text-align: center;\n        }\n    ");
+            exports_1("DEFAULT_TEMPLATE", DEFAULT_TEMPLATE = "\n<div class=\"multiple-date-picker\">\n    <div class=\"picker-top-row\" [ngSwitch]=\"arrow\">\n        <div class=\"text-center picker-navigate picker-navigate-left-arrow\" id=\"button\" [ngClass]=\"{'disabled':disableBackButton}\" (click)=\"changeMonth($event, disableBackButton, -1)\">\n            <p *ngSwitchDefault>&lt;</p>\n            <p *ngSwitchCase=\"1\"><i class=\"material-icons\">keyboard_arrow_left</i></p>\n            <p *ngSwitchCase=\"2\"><i class=\"fa fa-angle-left\" aria-hidden=\"true\"></i></p>\n        </div>\n        <div class=\"text-center picker-month\">\n            {{monthToDisplay}}\n            <span *ngIf=\"yearsForSelect.length < 2\">{{yearToDisplay}}</span>\n        </div>\n        <div class=\"text-center picker-navigate picker-navigate-right-arrow\" [ngClass]=\"{'disabled':disableNextButton}\" (click)=\"changeMonth($event, disableNextButton, 1)\">\n            <p *ngSwitchDefault>&gt;</p>\n            <p *ngSwitchCase=\"1\"><i class=\"material-icons\">keyboard_arrow_right</i></p>\n            <p *ngSwitchCase=\"2\"><i class=\"fa fa-angle-right\" aria-hidden=\"true\"></i></p>\n        </div>\n            \n    </div>\n    <div class=\"picker-days-week-row\">\n        <div class=\"text-center\" *ngFor=\"let weekDays of daysOfWeek\">{{weekDays}}</div>\n    </div>\n    <div class=\"picker-days-row\">\n        <div class=\"text-center picker-day {{getDayClasses(day)}}\" title=\"{{day.title}}\" *ngFor=\"let day of days\" (click)=\"toggleDay($event, day)\" >\n            {{day ? day.mdp.otherMonth && !showDaysOfSurroundingMonths ? '&nbsp;' : day.date.format('D') : ''}}\n        </div>\n    </div>\n</div>\n    ");
+            exports_1("DEFAULT_STYLES", DEFAULT_STYLES = "\n    .text-center {\n        text-align: center\n    }\n    \n    .multiple-date-picker {\n        -webkit-user-select: none;\n        -moz-user-select: none;\n        -ms-user-select: none;\n        user-select: none\n    }\n    \n    .multiple-date-picker,.picker-days-row,.picker-days-week-row,.picker-top-row {\n        width: 100%\n    }\n    \n    .picker-top-row>div {\n        display: inline-block\n    }\n    \n    .picker-navigate {\n        width: 16.5%\n    }\n    \n    .picker-navigate:hover {\n        cursor: pointer\n    }\n    \n    .picker-navigate.disabled,.picker-navigate.disabled:hover {\n        color: #ddd;\n        cursor: default\n    }\n    \n    .picker-month {\n        width: 65%\n    }\n    \n    .picker-days-row>div,.picker-days-week-row>div {\n        width: 14.28%;\n        display: inline-block\n    }\n    \n    .picker-day,.picker-top-row {\n        padding: 10px 0\n    }\n    \n    .picker-day {\n        background-color: #fff;\n        border: 1px solid #eee;\n        box-sizing: border-box;\n        color: #000\n    }\n    \n    .picker-day.today,.picker-day.today.picker-off,.picker-day.today.picker-off:hover,.picker-day.today.picker-selected,.picker-day.today:hover {\n        color: #00a3ff\n    }\n    \n    .picker-day:not(.picker-off):not(.picker-empty):hover {\n        background-color: #C6000B;\n        color: #fff;\n        cursor: pointer\n    }\n    \n    .picker-day.picker-selected {\n        background-color: #C6000B;\n        color: #fff\n    }\n    \n    .picker-day.picker-off,.picker-day.picker-off:hover {\n        background-color: #eee;\n        color: #bbb;\n        cursor: default\n    }\n    \n    .picker-day.picker-empty,.picker-day.picker-empty:hover {\n        background-color: #fafafa;\n        cursor: default\n    }\n    \n    input {\n            border: 0;\n            border-radius: 3px;\n            height: 30px;\n            max-width: 100px;\n            text-align: center;\n        }\n    ");
         }
     };
 });
@@ -49,6 +49,7 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
             MultipleDatePickerComponent = MultipleDatePickerComponent_1 = (function () {
                 function MultipleDatePickerComponent() {
                     this.cssDaysOfSurroundingMonths = this.cssDaysOfSurroundingMonths || 'picker-empty';
+                    this.arrow = 0;
                     this.month = this.month || moment().startOf('day');
                     this.projectScope = [];
                     this.days = [];
@@ -64,6 +65,15 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
                 MultipleDatePickerComponent.prototype.ngOnInit = function () {
                     this.generate();
                     this.daysOfWeek = this.getDaysOfWeek();
+                    this.arrowSelected();
+                };
+                MultipleDatePickerComponent.prototype.arrowSelected = function () {
+                    if (this.matIcons) {
+                        return this.arrow = 1;
+                    }
+                    else if (this.fontAwesome) {
+                        return this.arrow = 2;
+                    }
                 };
                 MultipleDatePickerComponent.prototype.writeValue = function (value) {
                     var _this = this;
@@ -348,6 +358,14 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
                 core_1.Input(),
                 __metadata("design:type", Object)
             ], MultipleDatePickerComponent.prototype, "monthChanged", void 0);
+            __decorate([
+                core_1.Input(),
+                __metadata("design:type", Boolean)
+            ], MultipleDatePickerComponent.prototype, "fontAwesome", void 0);
+            __decorate([
+                core_1.Input(),
+                __metadata("design:type", Boolean)
+            ], MultipleDatePickerComponent.prototype, "matIcons", void 0);
             __decorate([
                 core_1.Input(),
                 __metadata("design:type", String)

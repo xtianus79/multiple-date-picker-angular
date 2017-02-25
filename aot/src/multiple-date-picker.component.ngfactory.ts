@@ -16,16 +16,18 @@ import * as import7 from '@angular/core/src/change_detection/constants';
 import * as import8 from '@angular/core/src/linker/component_factory';
 import * as import9 from '@angular/forms/src/directives/control_value_accessor';
 import * as import10 from '@angular/core/src/linker/view_container';
-import * as import11 from '../aot/node_modules/@angular/common/src/directives/ng_class.ngfactory';
-import * as import12 from '../aot/node_modules/@angular/common/src/directives/ng_if.ngfactory';
-import * as import13 from '../aot/node_modules/@angular/common/src/directives/ng_for.ngfactory';
-import * as import14 from '@angular/core/src/change_detection/differs/iterable_differs';
-import * as import15 from '@angular/core/src/change_detection/differs/keyvalue_differs';
-import * as import16 from '@angular/core/src/linker/element_ref';
-import * as import17 from '@angular/core/src/linker/template_ref';
-import * as import18 from '@angular/common/src/directives/ng_class';
-import * as import19 from '@angular/common/src/directives/ng_if';
-import * as import20 from '@angular/common/src/directives/ng_for';
+import * as import11 from '../aot/node_modules/@angular/common/src/directives/ng_switch.ngfactory';
+import * as import12 from '../aot/node_modules/@angular/common/src/directives/ng_class.ngfactory';
+import * as import13 from '../aot/node_modules/@angular/common/src/directives/ng_if.ngfactory';
+import * as import14 from '../aot/node_modules/@angular/common/src/directives/ng_for.ngfactory';
+import * as import15 from '@angular/core/src/change_detection/differs/iterable_differs';
+import * as import16 from '@angular/core/src/change_detection/differs/keyvalue_differs';
+import * as import17 from '@angular/core/src/linker/element_ref';
+import * as import18 from '@angular/core/src/linker/template_ref';
+import * as import19 from '@angular/common/src/directives/ng_switch';
+import * as import20 from '@angular/common/src/directives/ng_class';
+import * as import21 from '@angular/common/src/directives/ng_if';
+import * as import22 from '@angular/common/src/directives/ng_for';
 export class Wrapper_MultipleDatePickerComponent {
   /*private*/ _eventHandler:Function;
   context:import0.MultipleDatePickerComponent;
@@ -52,6 +54,8 @@ export class Wrapper_MultipleDatePickerComponent {
   /*private*/ _expr_19:any;
   /*private*/ _expr_20:any;
   /*private*/ _expr_21:any;
+  /*private*/ _expr_22:any;
+  /*private*/ _expr_23:any;
   constructor() {
     this._changed = false;
     this.context = new import0.MultipleDatePickerComponent();
@@ -77,6 +81,8 @@ export class Wrapper_MultipleDatePickerComponent {
     this._expr_19 = import1.UNINITIALIZED;
     this._expr_20 = import1.UNINITIALIZED;
     this._expr_21 = import1.UNINITIALIZED;
+    this._expr_22 = import1.UNINITIALIZED;
+    this._expr_23 = import1.UNINITIALIZED;
   }
   ngOnDetach(view:import2.AppView<any>,componentView:import2.AppView<any>,el:any):void {
   }
@@ -117,123 +123,137 @@ export class Wrapper_MultipleDatePickerComponent {
       this._expr_4 = currValue;
     }
   }
-  check_monthClick(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_fontAwesome(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_5,currValue))) {
       this._changed = true;
-      this.context.monthClick = currValue;
+      this.context.fontAwesome = currValue;
       this._expr_5 = currValue;
     }
   }
-  check_weekDaysOff(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_matIcons(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_6,currValue))) {
       this._changed = true;
-      this.context.weekDaysOff = currValue;
+      this.context.matIcons = currValue;
       this._expr_6 = currValue;
     }
   }
-  check_allDaysOff(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_monthClick(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_7,currValue))) {
       this._changed = true;
-      this.context.allDaysOff = currValue;
+      this.context.monthClick = currValue;
       this._expr_7 = currValue;
     }
   }
-  check_daysAllowed(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_weekDaysOff(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_8,currValue))) {
       this._changed = true;
-      this.context.daysAllowed = currValue;
+      this.context.weekDaysOff = currValue;
       this._expr_8 = currValue;
     }
   }
-  check_disableNavigation(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_allDaysOff(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_9,currValue))) {
       this._changed = true;
-      this.context.disableNavigation = currValue;
+      this.context.allDaysOff = currValue;
       this._expr_9 = currValue;
     }
   }
-  check_disallowBackPastMonths(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_daysAllowed(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_10,currValue))) {
       this._changed = true;
-      this.context.disallowBackPastMonths = currValue;
+      this.context.daysAllowed = currValue;
       this._expr_10 = currValue;
     }
   }
-  check_disallowGoFuturMonths(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_disableNavigation(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_11,currValue))) {
       this._changed = true;
-      this.context.disallowGoFuturMonths = currValue;
+      this.context.disableNavigation = currValue;
       this._expr_11 = currValue;
     }
   }
-  check_showDaysOfSurroundingMonths(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_disallowBackPastMonths(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_12,currValue))) {
       this._changed = true;
-      this.context.showDaysOfSurroundingMonths = currValue;
+      this.context.disallowBackPastMonths = currValue;
       this._expr_12 = currValue;
     }
   }
-  check_cssDaysOfSurroundingMonths(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_disallowGoFuturMonths(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_13,currValue))) {
       this._changed = true;
-      this.context.cssDaysOfSurroundingMonths = currValue;
+      this.context.disallowGoFuturMonths = currValue;
       this._expr_13 = currValue;
     }
   }
-  check_fireEventsForDaysOfSurroundingMonths(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_showDaysOfSurroundingMonths(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_14,currValue))) {
       this._changed = true;
-      this.context.fireEventsForDaysOfSurroundingMonths = currValue;
+      this.context.showDaysOfSurroundingMonths = currValue;
       this._expr_14 = currValue;
     }
   }
-  check_disableDaysBefore(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_cssDaysOfSurroundingMonths(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_15,currValue))) {
       this._changed = true;
-      this.context.disableDaysBefore = currValue;
+      this.context.cssDaysOfSurroundingMonths = currValue;
       this._expr_15 = currValue;
     }
   }
-  check_disableDaysAfter(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_fireEventsForDaysOfSurroundingMonths(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_16,currValue))) {
       this._changed = true;
-      this.context.disableDaysAfter = currValue;
+      this.context.fireEventsForDaysOfSurroundingMonths = currValue;
       this._expr_16 = currValue;
     }
   }
-  check_changeYearPast(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_disableDaysBefore(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_17,currValue))) {
       this._changed = true;
-      this.context.changeYearPast = currValue;
+      this.context.disableDaysBefore = currValue;
       this._expr_17 = currValue;
     }
   }
-  check_changeYearFuture(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_disableDaysAfter(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_18,currValue))) {
       this._changed = true;
-      this.context.changeYearFuture = currValue;
+      this.context.disableDaysAfter = currValue;
       this._expr_18 = currValue;
     }
   }
-  check_projectScope(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_changeYearPast(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_19,currValue))) {
       this._changed = true;
-      this.context.projectScope = currValue;
+      this.context.changeYearPast = currValue;
       this._expr_19 = currValue;
     }
   }
-  check_sundayFirstDay(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_changeYearFuture(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_20,currValue))) {
       this._changed = true;
-      this.context.sundayFirstDay = currValue;
+      this.context.changeYearFuture = currValue;
       this._expr_20 = currValue;
     }
   }
-  check__projectScope(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_projectScope(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_21,currValue))) {
       this._changed = true;
-      this.context._projectScope = currValue;
+      this.context.projectScope = currValue;
       this._expr_21 = currValue;
+    }
+  }
+  check_sundayFirstDay(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+    if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_22,currValue))) {
+      this._changed = true;
+      this.context.sundayFirstDay = currValue;
+      this._expr_22 = currValue;
+    }
+  }
+  check__projectScope(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+    if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_23,currValue))) {
+      this._changed = true;
+      this.context._projectScope = currValue;
+      this._expr_23 = currValue;
     }
   }
   ngDoCheck(view:import2.AppView<any>,el:any,throwOnChange:boolean):boolean {
@@ -290,13 +310,76 @@ class View_MultipleDatePickerComponent_Host0 extends import2.AppView<any> {
   }
 }
 export const MultipleDatePickerComponentNgFactory:import8.ComponentFactory<import0.MultipleDatePickerComponent> = new import8.ComponentFactory<import0.MultipleDatePickerComponent>('multiple-date-picker',View_MultipleDatePickerComponent_Host0,import0.MultipleDatePickerComponent);
-const styles_MultipleDatePickerComponent:any[] = ['.text-center[_ngcontent-%COMP%] {\n        text-align: center\n    }\n    \n    .multiple-date-picker[_ngcontent-%COMP%] {\n        -webkit-user-select: none;\n        -moz-user-select: none;\n        -ms-user-select: none;\n        user-select: none\n    }\n    \n    .multiple-date-picker[_ngcontent-%COMP%], .picker-days-row[_ngcontent-%COMP%], .picker-days-week-row[_ngcontent-%COMP%], .picker-top-row[_ngcontent-%COMP%] {\n        width: 100%\n    }\n    \n    .picker-top-row[_ngcontent-%COMP%] > div[_ngcontent-%COMP%] {\n        display: inline-block\n    }\n    \n    .picker-navigate[_ngcontent-%COMP%] {\n        width: 16.66%\n    }\n    \n    .picker-navigate[_ngcontent-%COMP%]:hover {\n        cursor: pointer\n    }\n    \n    .picker-navigate.disabled[_ngcontent-%COMP%], .picker-navigate.disabled[_ngcontent-%COMP%]:hover {\n        color: #ddd;\n        cursor: default\n    }\n    \n    .picker-month[_ngcontent-%COMP%] {\n        width: 66%\n    }\n    \n    .picker-days-row[_ngcontent-%COMP%] > div[_ngcontent-%COMP%], .picker-days-week-row[_ngcontent-%COMP%] > div[_ngcontent-%COMP%] {\n        width: 14.28%;\n        display: inline-block\n    }\n    \n    .picker-day[_ngcontent-%COMP%], .picker-top-row[_ngcontent-%COMP%] {\n        padding: 10px 0\n    }\n    \n    .picker-day[_ngcontent-%COMP%] {\n        background-color: #fff;\n        border: 1px solid #eee;\n        box-sizing: border-box;\n        color: #000\n    }\n    \n    .picker-day.today[_ngcontent-%COMP%], .picker-day.today.picker-off[_ngcontent-%COMP%], .picker-day.today.picker-off[_ngcontent-%COMP%]:hover, .picker-day.today.picker-selected[_ngcontent-%COMP%], .picker-day.today[_ngcontent-%COMP%]:hover {\n        color: #00a3ff\n    }\n    \n    .picker-day[_ngcontent-%COMP%]:not(.picker-off):not(.picker-empty):hover {\n        background-color: #C6000B;\n        color: #fff;\n        cursor: pointer\n    }\n    \n    .picker-day.picker-selected[_ngcontent-%COMP%] {\n        background-color: #C6000B;\n        color: #fff\n    }\n    \n    .picker-day.picker-off[_ngcontent-%COMP%], .picker-day.picker-off[_ngcontent-%COMP%]:hover {\n        background-color: #eee;\n        color: #bbb;\n        cursor: default\n    }\n    \n    .picker-day.picker-empty[_ngcontent-%COMP%], .picker-day.picker-empty[_ngcontent-%COMP%]:hover {\n        background-color: #fafafa;\n        cursor: default\n    }\n    \n    input[_ngcontent-%COMP%] {\n            border: 0;\n            border-radius: 3px;\n            height: 30px;\n            max-width: 100px;\n            text-align: center;\n        }'];
+const styles_MultipleDatePickerComponent:any[] = ['.text-center[_ngcontent-%COMP%] {\n        text-align: center\n    }\n    \n    .multiple-date-picker[_ngcontent-%COMP%] {\n        -webkit-user-select: none;\n        -moz-user-select: none;\n        -ms-user-select: none;\n        user-select: none\n    }\n    \n    .multiple-date-picker[_ngcontent-%COMP%], .picker-days-row[_ngcontent-%COMP%], .picker-days-week-row[_ngcontent-%COMP%], .picker-top-row[_ngcontent-%COMP%] {\n        width: 100%\n    }\n    \n    .picker-top-row[_ngcontent-%COMP%] > div[_ngcontent-%COMP%] {\n        display: inline-block\n    }\n    \n    .picker-navigate[_ngcontent-%COMP%] {\n        width: 16.5%\n    }\n    \n    .picker-navigate[_ngcontent-%COMP%]:hover {\n        cursor: pointer\n    }\n    \n    .picker-navigate.disabled[_ngcontent-%COMP%], .picker-navigate.disabled[_ngcontent-%COMP%]:hover {\n        color: #ddd;\n        cursor: default\n    }\n    \n    .picker-month[_ngcontent-%COMP%] {\n        width: 65%\n    }\n    \n    .picker-days-row[_ngcontent-%COMP%] > div[_ngcontent-%COMP%], .picker-days-week-row[_ngcontent-%COMP%] > div[_ngcontent-%COMP%] {\n        width: 14.28%;\n        display: inline-block\n    }\n    \n    .picker-day[_ngcontent-%COMP%], .picker-top-row[_ngcontent-%COMP%] {\n        padding: 10px 0\n    }\n    \n    .picker-day[_ngcontent-%COMP%] {\n        background-color: #fff;\n        border: 1px solid #eee;\n        box-sizing: border-box;\n        color: #000\n    }\n    \n    .picker-day.today[_ngcontent-%COMP%], .picker-day.today.picker-off[_ngcontent-%COMP%], .picker-day.today.picker-off[_ngcontent-%COMP%]:hover, .picker-day.today.picker-selected[_ngcontent-%COMP%], .picker-day.today[_ngcontent-%COMP%]:hover {\n        color: #00a3ff\n    }\n    \n    .picker-day[_ngcontent-%COMP%]:not(.picker-off):not(.picker-empty):hover {\n        background-color: #C6000B;\n        color: #fff;\n        cursor: pointer\n    }\n    \n    .picker-day.picker-selected[_ngcontent-%COMP%] {\n        background-color: #C6000B;\n        color: #fff\n    }\n    \n    .picker-day.picker-off[_ngcontent-%COMP%], .picker-day.picker-off[_ngcontent-%COMP%]:hover {\n        background-color: #eee;\n        color: #bbb;\n        cursor: default\n    }\n    \n    .picker-day.picker-empty[_ngcontent-%COMP%], .picker-day.picker-empty[_ngcontent-%COMP%]:hover {\n        background-color: #fafafa;\n        cursor: default\n    }\n    \n    input[_ngcontent-%COMP%] {\n            border: 0;\n            border-radius: 3px;\n            height: 30px;\n            max-width: 100px;\n            text-align: center;\n        }'];
 class View_MultipleDatePickerComponent1 extends import2.AppView<any> {
+  _el_0:any;
+  _text_1:any;
+  constructor(viewUtils:import3.ViewUtils,parentView:import2.AppView<any>,parentIndex:number,parentElement:any,declaredViewContainer:import10.ViewContainer) {
+    super(View_MultipleDatePickerComponent1,renderType_MultipleDatePickerComponent,import6.ViewType.EMBEDDED,viewUtils,parentView,parentIndex,parentElement,import7.ChangeDetectorStatus.CheckAlways,declaredViewContainer);
+  }
+  createInternal(rootSelector:string):import8.ComponentRef<any> {
+    this._el_0 = import3.createRenderElement(this.renderer,(null as any),'p',import3.EMPTY_INLINE_ARRAY,(null as any));
+    this._text_1 = this.renderer.createText(this._el_0,'<',(null as any));
+    this.init(this._el_0,((<any>this.renderer).directRenderer? (null as any): [
+      this._el_0,
+      this._text_1
+    ]
+    ),(null as any));
+    return (null as any);
+  }
+  visitRootNodesInternal(cb:any,ctx:any):void {
+    cb(this._el_0,ctx);
+  }
+}
+class View_MultipleDatePickerComponent2 extends import2.AppView<any> {
+  _el_0:any;
+  _el_1:any;
+  _text_2:any;
+  constructor(viewUtils:import3.ViewUtils,parentView:import2.AppView<any>,parentIndex:number,parentElement:any,declaredViewContainer:import10.ViewContainer) {
+    super(View_MultipleDatePickerComponent2,renderType_MultipleDatePickerComponent,import6.ViewType.EMBEDDED,viewUtils,parentView,parentIndex,parentElement,import7.ChangeDetectorStatus.CheckAlways,declaredViewContainer);
+  }
+  createInternal(rootSelector:string):import8.ComponentRef<any> {
+    this._el_0 = import3.createRenderElement(this.renderer,(null as any),'p',import3.EMPTY_INLINE_ARRAY,(null as any));
+    this._el_1 = import3.createRenderElement(this.renderer,this._el_0,'i',new import3.InlineArray2(2,'class','material-icons'),(null as any));
+    this._text_2 = this.renderer.createText(this._el_1,'keyboard_arrow_left',(null as any));
+    this.init(this._el_0,((<any>this.renderer).directRenderer? (null as any): [
+      this._el_0,
+      this._el_1,
+      this._text_2
+    ]
+    ),(null as any));
+    return (null as any);
+  }
+  visitRootNodesInternal(cb:any,ctx:any):void {
+    cb(this._el_0,ctx);
+  }
+}
+class View_MultipleDatePickerComponent3 extends import2.AppView<any> {
+  _el_0:any;
+  _el_1:any;
+  constructor(viewUtils:import3.ViewUtils,parentView:import2.AppView<any>,parentIndex:number,parentElement:any,declaredViewContainer:import10.ViewContainer) {
+    super(View_MultipleDatePickerComponent3,renderType_MultipleDatePickerComponent,import6.ViewType.EMBEDDED,viewUtils,parentView,parentIndex,parentElement,import7.ChangeDetectorStatus.CheckAlways,declaredViewContainer);
+  }
+  createInternal(rootSelector:string):import8.ComponentRef<any> {
+    this._el_0 = import3.createRenderElement(this.renderer,(null as any),'p',import3.EMPTY_INLINE_ARRAY,(null as any));
+    this._el_1 = import3.createRenderElement(this.renderer,this._el_0,'i',new import3.InlineArray4(4,'aria-hidden','true','class','fa fa-angle-left'),(null as any));
+    this.init(this._el_0,((<any>this.renderer).directRenderer? (null as any): [
+      this._el_0,
+      this._el_1
+    ]
+    ),(null as any));
+    return (null as any);
+  }
+  visitRootNodesInternal(cb:any,ctx:any):void {
+    cb(this._el_0,ctx);
+  }
+}
+class View_MultipleDatePickerComponent4 extends import2.AppView<any> {
   _el_0:any;
   _text_1:any;
   /*private*/ _expr_2:any;
   constructor(viewUtils:import3.ViewUtils,parentView:import2.AppView<any>,parentIndex:number,parentElement:any,declaredViewContainer:import10.ViewContainer) {
-    super(View_MultipleDatePickerComponent1,renderType_MultipleDatePickerComponent,import6.ViewType.EMBEDDED,viewUtils,parentView,parentIndex,parentElement,import7.ChangeDetectorStatus.CheckAlways,declaredViewContainer);
+    super(View_MultipleDatePickerComponent4,renderType_MultipleDatePickerComponent,import6.ViewType.EMBEDDED,viewUtils,parentView,parentIndex,parentElement,import7.ChangeDetectorStatus.CheckAlways,declaredViewContainer);
     this._expr_2 = import1.UNINITIALIZED;
   }
   createInternal(rootSelector:string):import8.ComponentRef<any> {
@@ -320,12 +403,75 @@ class View_MultipleDatePickerComponent1 extends import2.AppView<any> {
     cb(this._el_0,ctx);
   }
 }
-class View_MultipleDatePickerComponent2 extends import2.AppView<any> {
+class View_MultipleDatePickerComponent5 extends import2.AppView<any> {
+  _el_0:any;
+  _text_1:any;
+  constructor(viewUtils:import3.ViewUtils,parentView:import2.AppView<any>,parentIndex:number,parentElement:any,declaredViewContainer:import10.ViewContainer) {
+    super(View_MultipleDatePickerComponent5,renderType_MultipleDatePickerComponent,import6.ViewType.EMBEDDED,viewUtils,parentView,parentIndex,parentElement,import7.ChangeDetectorStatus.CheckAlways,declaredViewContainer);
+  }
+  createInternal(rootSelector:string):import8.ComponentRef<any> {
+    this._el_0 = import3.createRenderElement(this.renderer,(null as any),'p',import3.EMPTY_INLINE_ARRAY,(null as any));
+    this._text_1 = this.renderer.createText(this._el_0,'>',(null as any));
+    this.init(this._el_0,((<any>this.renderer).directRenderer? (null as any): [
+      this._el_0,
+      this._text_1
+    ]
+    ),(null as any));
+    return (null as any);
+  }
+  visitRootNodesInternal(cb:any,ctx:any):void {
+    cb(this._el_0,ctx);
+  }
+}
+class View_MultipleDatePickerComponent6 extends import2.AppView<any> {
+  _el_0:any;
+  _el_1:any;
+  _text_2:any;
+  constructor(viewUtils:import3.ViewUtils,parentView:import2.AppView<any>,parentIndex:number,parentElement:any,declaredViewContainer:import10.ViewContainer) {
+    super(View_MultipleDatePickerComponent6,renderType_MultipleDatePickerComponent,import6.ViewType.EMBEDDED,viewUtils,parentView,parentIndex,parentElement,import7.ChangeDetectorStatus.CheckAlways,declaredViewContainer);
+  }
+  createInternal(rootSelector:string):import8.ComponentRef<any> {
+    this._el_0 = import3.createRenderElement(this.renderer,(null as any),'p',import3.EMPTY_INLINE_ARRAY,(null as any));
+    this._el_1 = import3.createRenderElement(this.renderer,this._el_0,'i',new import3.InlineArray2(2,'class','material-icons'),(null as any));
+    this._text_2 = this.renderer.createText(this._el_1,'keyboard_arrow_right',(null as any));
+    this.init(this._el_0,((<any>this.renderer).directRenderer? (null as any): [
+      this._el_0,
+      this._el_1,
+      this._text_2
+    ]
+    ),(null as any));
+    return (null as any);
+  }
+  visitRootNodesInternal(cb:any,ctx:any):void {
+    cb(this._el_0,ctx);
+  }
+}
+class View_MultipleDatePickerComponent7 extends import2.AppView<any> {
+  _el_0:any;
+  _el_1:any;
+  constructor(viewUtils:import3.ViewUtils,parentView:import2.AppView<any>,parentIndex:number,parentElement:any,declaredViewContainer:import10.ViewContainer) {
+    super(View_MultipleDatePickerComponent7,renderType_MultipleDatePickerComponent,import6.ViewType.EMBEDDED,viewUtils,parentView,parentIndex,parentElement,import7.ChangeDetectorStatus.CheckAlways,declaredViewContainer);
+  }
+  createInternal(rootSelector:string):import8.ComponentRef<any> {
+    this._el_0 = import3.createRenderElement(this.renderer,(null as any),'p',import3.EMPTY_INLINE_ARRAY,(null as any));
+    this._el_1 = import3.createRenderElement(this.renderer,this._el_0,'i',new import3.InlineArray4(4,'aria-hidden','true','class','fa fa-angle-right'),(null as any));
+    this.init(this._el_0,((<any>this.renderer).directRenderer? (null as any): [
+      this._el_0,
+      this._el_1
+    ]
+    ),(null as any));
+    return (null as any);
+  }
+  visitRootNodesInternal(cb:any,ctx:any):void {
+    cb(this._el_0,ctx);
+  }
+}
+class View_MultipleDatePickerComponent8 extends import2.AppView<any> {
   _el_0:any;
   _text_1:any;
   /*private*/ _expr_2:any;
   constructor(viewUtils:import3.ViewUtils,parentView:import2.AppView<any>,parentIndex:number,parentElement:any,declaredViewContainer:import10.ViewContainer) {
-    super(View_MultipleDatePickerComponent2,renderType_MultipleDatePickerComponent,import6.ViewType.EMBEDDED,viewUtils,parentView,parentIndex,parentElement,import7.ChangeDetectorStatus.CheckAlways,declaredViewContainer);
+    super(View_MultipleDatePickerComponent8,renderType_MultipleDatePickerComponent,import6.ViewType.EMBEDDED,viewUtils,parentView,parentIndex,parentElement,import7.ChangeDetectorStatus.CheckAlways,declaredViewContainer);
     this._expr_2 = import1.UNINITIALIZED;
   }
   createInternal(rootSelector:string):import8.ComponentRef<any> {
@@ -349,14 +495,14 @@ class View_MultipleDatePickerComponent2 extends import2.AppView<any> {
     cb(this._el_0,ctx);
   }
 }
-class View_MultipleDatePickerComponent3 extends import2.AppView<any> {
+class View_MultipleDatePickerComponent9 extends import2.AppView<any> {
   _el_0:any;
   _text_1:any;
   /*private*/ _expr_2:any;
   /*private*/ _expr_3:any;
   /*private*/ _expr_4:any;
   constructor(viewUtils:import3.ViewUtils,parentView:import2.AppView<any>,parentIndex:number,parentElement:any,declaredViewContainer:import10.ViewContainer) {
-    super(View_MultipleDatePickerComponent3,renderType_MultipleDatePickerComponent,import6.ViewType.EMBEDDED,viewUtils,parentView,parentIndex,parentElement,import7.ChangeDetectorStatus.CheckAlways,declaredViewContainer);
+    super(View_MultipleDatePickerComponent9,renderType_MultipleDatePickerComponent,import6.ViewType.EMBEDDED,viewUtils,parentView,parentIndex,parentElement,import7.ChangeDetectorStatus.CheckAlways,declaredViewContainer);
     this._expr_2 = import1.UNINITIALIZED;
     this._expr_3 = import1.UNINITIALIZED;
     this._expr_4 = import1.UNINITIALIZED;
@@ -408,51 +554,82 @@ export class View_MultipleDatePickerComponent0 extends import2.AppView<import0.M
   _el_1:any;
   _text_2:any;
   _el_3:any;
+  _NgSwitch_3_3:import11.Wrapper_NgSwitch;
   _text_4:any;
   _el_5:any;
-  _NgClass_5_3:import11.Wrapper_NgClass;
+  _NgClass_5_3:import12.Wrapper_NgClass;
   _text_6:any;
-  _text_7:any;
-  _el_8:any;
-  _text_9:any;
-  _anchor_10:any;
-  /*private*/ _vc_10:import10.ViewContainer;
-  _TemplateRef_10_5:any;
-  _NgIf_10_6:import12.Wrapper_NgIf;
-  _text_11:any;
+  _anchor_7:any;
+  /*private*/ _vc_7:import10.ViewContainer;
+  _TemplateRef_7_5:any;
+  _NgSwitchDefault_7_6:import11.Wrapper_NgSwitchDefault;
+  _text_8:any;
+  _anchor_9:any;
+  /*private*/ _vc_9:import10.ViewContainer;
+  _TemplateRef_9_5:any;
+  _NgSwitchCase_9_6:import11.Wrapper_NgSwitchCase;
+  _text_10:any;
+  _anchor_11:any;
+  /*private*/ _vc_11:import10.ViewContainer;
+  _TemplateRef_11_5:any;
+  _NgSwitchCase_11_6:import11.Wrapper_NgSwitchCase;
   _text_12:any;
-  _el_13:any;
-  _NgClass_13_3:import11.Wrapper_NgClass;
-  _text_14:any;
+  _text_13:any;
+  _el_14:any;
   _text_15:any;
-  _text_16:any;
-  _el_17:any;
+  _anchor_16:any;
+  /*private*/ _vc_16:import10.ViewContainer;
+  _TemplateRef_16_5:any;
+  _NgIf_16_6:import13.Wrapper_NgIf;
+  _text_17:any;
   _text_18:any;
-  _anchor_19:any;
-  /*private*/ _vc_19:import10.ViewContainer;
-  _TemplateRef_19_5:any;
-  _NgFor_19_6:import13.Wrapper_NgFor;
+  _el_19:any;
+  _NgClass_19_3:import12.Wrapper_NgClass;
   _text_20:any;
-  _text_21:any;
-  _el_22:any;
-  _text_23:any;
-  _anchor_24:any;
-  /*private*/ _vc_24:import10.ViewContainer;
-  _TemplateRef_24_5:any;
-  _NgFor_24_6:import13.Wrapper_NgFor;
-  _text_25:any;
+  _anchor_21:any;
+  /*private*/ _vc_21:import10.ViewContainer;
+  _TemplateRef_21_5:any;
+  _NgSwitchDefault_21_6:import11.Wrapper_NgSwitchDefault;
+  _text_22:any;
+  _anchor_23:any;
+  /*private*/ _vc_23:import10.ViewContainer;
+  _TemplateRef_23_5:any;
+  _NgSwitchCase_23_6:import11.Wrapper_NgSwitchCase;
+  _text_24:any;
+  _anchor_25:any;
+  /*private*/ _vc_25:import10.ViewContainer;
+  _TemplateRef_25_5:any;
+  _NgSwitchCase_25_6:import11.Wrapper_NgSwitchCase;
   _text_26:any;
   _text_27:any;
-  _map_39:any;
-  /*private*/ _expr_40:any;
-  _map_41:any;
+  _text_28:any;
+  _el_29:any;
+  _text_30:any;
+  _anchor_31:any;
+  /*private*/ _vc_31:import10.ViewContainer;
+  _TemplateRef_31_5:any;
+  _NgFor_31_6:import14.Wrapper_NgFor;
+  _text_32:any;
+  _text_33:any;
+  _el_34:any;
+  _text_35:any;
+  _anchor_36:any;
+  /*private*/ _vc_36:import10.ViewContainer;
+  _TemplateRef_36_5:any;
+  _NgFor_36_6:import14.Wrapper_NgFor;
+  _text_37:any;
+  _text_38:any;
+  _text_39:any;
+  _map_70:any;
+  /*private*/ _expr_71:any;
+  _map_72:any;
   constructor(viewUtils:import3.ViewUtils,parentView:import2.AppView<any>,parentIndex:number,parentElement:any) {
     super(View_MultipleDatePickerComponent0,renderType_MultipleDatePickerComponent,import6.ViewType.COMPONENT,viewUtils,parentView,parentIndex,parentElement,import7.ChangeDetectorStatus.CheckAlways);
-    this._map_39 = import3.pureProxy1((p0:any):{[key: string]:any} => {
+    this._map_70 = import3.pureProxy1((p0:any):{[key: string]:any} => {
       return {disabled: p0};
     });
-    this._expr_40 = import1.UNINITIALIZED;
-    this._map_41 = import3.pureProxy1((p0:any):{[key: string]:any} => {
+    this._expr_71 = import1.UNINITIALIZED;
+    this._map_72 = import3.pureProxy1((p0:any):{[key: string]:any} => {
       return {disabled: p0};
     });
   }
@@ -462,43 +639,74 @@ export class View_MultipleDatePickerComponent0 extends import2.AppView<import0.M
     this._el_1 = import3.createRenderElement(this.renderer,parentRenderNode,'div',new import3.InlineArray2(2,'class','multiple-date-picker'),(null as any));
     this._text_2 = this.renderer.createText(this._el_1,'\n    ',(null as any));
     this._el_3 = import3.createRenderElement(this.renderer,this._el_1,'div',new import3.InlineArray2(2,'class','picker-top-row'),(null as any));
+    this._NgSwitch_3_3 = new import11.Wrapper_NgSwitch();
     this._text_4 = this.renderer.createText(this._el_3,'\n        ',(null as any));
-    this._el_5 = import3.createRenderElement(this.renderer,this._el_3,'div',new import3.InlineArray2(2,'class','text-center picker-navigate picker-navigate-left-arrow'),(null as any));
-    this._NgClass_5_3 = new import11.Wrapper_NgClass(this.parentView.injectorGet(import14.IterableDiffers,this.parentIndex),this.parentView.injectorGet(import15.KeyValueDiffers,this.parentIndex),new import16.ElementRef(this._el_5),this.renderer);
-    this._text_6 = this.renderer.createText(this._el_5,'<',(null as any));
-    this._text_7 = this.renderer.createText(this._el_3,'\n        ',(null as any));
-    this._el_8 = import3.createRenderElement(this.renderer,this._el_3,'div',new import3.InlineArray2(2,'class','text-center picker-month'),(null as any));
-    this._text_9 = this.renderer.createText(this._el_8,'',(null as any));
-    this._anchor_10 = this.renderer.createTemplateAnchor(this._el_8,(null as any));
-    this._vc_10 = new import10.ViewContainer(10,8,this,this._anchor_10);
-    this._TemplateRef_10_5 = new import17.TemplateRef_(this,10,this._anchor_10);
-    this._NgIf_10_6 = new import12.Wrapper_NgIf(this._vc_10.vcRef,this._TemplateRef_10_5);
-    this._text_11 = this.renderer.createText(this._el_8,'\n        ',(null as any));
-    this._text_12 = this.renderer.createText(this._el_3,'\n        ',(null as any));
-    this._el_13 = import3.createRenderElement(this.renderer,this._el_3,'div',new import3.InlineArray2(2,'class','text-center picker-navigate picker-navigate-right-arrow'),(null as any));
-    this._NgClass_13_3 = new import11.Wrapper_NgClass(this.parentView.injectorGet(import14.IterableDiffers,this.parentIndex),this.parentView.injectorGet(import15.KeyValueDiffers,this.parentIndex),new import16.ElementRef(this._el_13),this.renderer);
-    this._text_14 = this.renderer.createText(this._el_13,'>',(null as any));
-    this._text_15 = this.renderer.createText(this._el_3,'\n    ',(null as any));
-    this._text_16 = this.renderer.createText(this._el_1,'\n    ',(null as any));
-    this._el_17 = import3.createRenderElement(this.renderer,this._el_1,'div',new import3.InlineArray2(2,'class','picker-days-week-row'),(null as any));
-    this._text_18 = this.renderer.createText(this._el_17,'\n        ',(null as any));
-    this._anchor_19 = this.renderer.createTemplateAnchor(this._el_17,(null as any));
-    this._vc_19 = new import10.ViewContainer(19,17,this,this._anchor_19);
-    this._TemplateRef_19_5 = new import17.TemplateRef_(this,19,this._anchor_19);
-    this._NgFor_19_6 = new import13.Wrapper_NgFor(this._vc_19.vcRef,this._TemplateRef_19_5,this.parentView.injectorGet(import14.IterableDiffers,this.parentIndex),this.ref);
-    this._text_20 = this.renderer.createText(this._el_17,'\n    ',(null as any));
-    this._text_21 = this.renderer.createText(this._el_1,'\n    ',(null as any));
-    this._el_22 = import3.createRenderElement(this.renderer,this._el_1,'div',new import3.InlineArray2(2,'class','picker-days-row'),(null as any));
-    this._text_23 = this.renderer.createText(this._el_22,'\n        ',(null as any));
-    this._anchor_24 = this.renderer.createTemplateAnchor(this._el_22,(null as any));
-    this._vc_24 = new import10.ViewContainer(24,22,this,this._anchor_24);
-    this._TemplateRef_24_5 = new import17.TemplateRef_(this,24,this._anchor_24);
-    this._NgFor_24_6 = new import13.Wrapper_NgFor(this._vc_24.vcRef,this._TemplateRef_24_5,this.parentView.injectorGet(import14.IterableDiffers,this.parentIndex),this.ref);
-    this._text_25 = this.renderer.createText(this._el_22,'\n    ',(null as any));
-    this._text_26 = this.renderer.createText(this._el_1,'\n',(null as any));
-    this._text_27 = this.renderer.createText(parentRenderNode,'\n    ',(null as any));
+    this._el_5 = import3.createRenderElement(this.renderer,this._el_3,'div',new import3.InlineArray4(4,'class','text-center picker-navigate picker-navigate-left-arrow','id','button'),(null as any));
+    this._NgClass_5_3 = new import12.Wrapper_NgClass(this.parentView.injectorGet(import15.IterableDiffers,this.parentIndex),this.parentView.injectorGet(import16.KeyValueDiffers,this.parentIndex),new import17.ElementRef(this._el_5),this.renderer);
+    this._text_6 = this.renderer.createText(this._el_5,'\n            ',(null as any));
+    this._anchor_7 = this.renderer.createTemplateAnchor(this._el_5,(null as any));
+    this._vc_7 = new import10.ViewContainer(7,5,this,this._anchor_7);
+    this._TemplateRef_7_5 = new import18.TemplateRef_(this,7,this._anchor_7);
+    this._NgSwitchDefault_7_6 = new import11.Wrapper_NgSwitchDefault(this._vc_7.vcRef,this._TemplateRef_7_5,this._NgSwitch_3_3.context);
+    this._text_8 = this.renderer.createText(this._el_5,'\n            ',(null as any));
+    this._anchor_9 = this.renderer.createTemplateAnchor(this._el_5,(null as any));
+    this._vc_9 = new import10.ViewContainer(9,5,this,this._anchor_9);
+    this._TemplateRef_9_5 = new import18.TemplateRef_(this,9,this._anchor_9);
+    this._NgSwitchCase_9_6 = new import11.Wrapper_NgSwitchCase(this._vc_9.vcRef,this._TemplateRef_9_5,this._NgSwitch_3_3.context);
+    this._text_10 = this.renderer.createText(this._el_5,'\n            ',(null as any));
+    this._anchor_11 = this.renderer.createTemplateAnchor(this._el_5,(null as any));
+    this._vc_11 = new import10.ViewContainer(11,5,this,this._anchor_11);
+    this._TemplateRef_11_5 = new import18.TemplateRef_(this,11,this._anchor_11);
+    this._NgSwitchCase_11_6 = new import11.Wrapper_NgSwitchCase(this._vc_11.vcRef,this._TemplateRef_11_5,this._NgSwitch_3_3.context);
+    this._text_12 = this.renderer.createText(this._el_5,'\n        ',(null as any));
+    this._text_13 = this.renderer.createText(this._el_3,'\n        ',(null as any));
+    this._el_14 = import3.createRenderElement(this.renderer,this._el_3,'div',new import3.InlineArray2(2,'class','text-center picker-month'),(null as any));
+    this._text_15 = this.renderer.createText(this._el_14,'',(null as any));
+    this._anchor_16 = this.renderer.createTemplateAnchor(this._el_14,(null as any));
+    this._vc_16 = new import10.ViewContainer(16,14,this,this._anchor_16);
+    this._TemplateRef_16_5 = new import18.TemplateRef_(this,16,this._anchor_16);
+    this._NgIf_16_6 = new import13.Wrapper_NgIf(this._vc_16.vcRef,this._TemplateRef_16_5);
+    this._text_17 = this.renderer.createText(this._el_14,'\n        ',(null as any));
+    this._text_18 = this.renderer.createText(this._el_3,'\n        ',(null as any));
+    this._el_19 = import3.createRenderElement(this.renderer,this._el_3,'div',new import3.InlineArray2(2,'class','text-center picker-navigate picker-navigate-right-arrow'),(null as any));
+    this._NgClass_19_3 = new import12.Wrapper_NgClass(this.parentView.injectorGet(import15.IterableDiffers,this.parentIndex),this.parentView.injectorGet(import16.KeyValueDiffers,this.parentIndex),new import17.ElementRef(this._el_19),this.renderer);
+    this._text_20 = this.renderer.createText(this._el_19,'\n            ',(null as any));
+    this._anchor_21 = this.renderer.createTemplateAnchor(this._el_19,(null as any));
+    this._vc_21 = new import10.ViewContainer(21,19,this,this._anchor_21);
+    this._TemplateRef_21_5 = new import18.TemplateRef_(this,21,this._anchor_21);
+    this._NgSwitchDefault_21_6 = new import11.Wrapper_NgSwitchDefault(this._vc_21.vcRef,this._TemplateRef_21_5,this._NgSwitch_3_3.context);
+    this._text_22 = this.renderer.createText(this._el_19,'\n            ',(null as any));
+    this._anchor_23 = this.renderer.createTemplateAnchor(this._el_19,(null as any));
+    this._vc_23 = new import10.ViewContainer(23,19,this,this._anchor_23);
+    this._TemplateRef_23_5 = new import18.TemplateRef_(this,23,this._anchor_23);
+    this._NgSwitchCase_23_6 = new import11.Wrapper_NgSwitchCase(this._vc_23.vcRef,this._TemplateRef_23_5,this._NgSwitch_3_3.context);
+    this._text_24 = this.renderer.createText(this._el_19,'\n            ',(null as any));
+    this._anchor_25 = this.renderer.createTemplateAnchor(this._el_19,(null as any));
+    this._vc_25 = new import10.ViewContainer(25,19,this,this._anchor_25);
+    this._TemplateRef_25_5 = new import18.TemplateRef_(this,25,this._anchor_25);
+    this._NgSwitchCase_25_6 = new import11.Wrapper_NgSwitchCase(this._vc_25.vcRef,this._TemplateRef_25_5,this._NgSwitch_3_3.context);
+    this._text_26 = this.renderer.createText(this._el_19,'\n        ',(null as any));
+    this._text_27 = this.renderer.createText(this._el_3,'\n            \n    ',(null as any));
+    this._text_28 = this.renderer.createText(this._el_1,'\n    ',(null as any));
+    this._el_29 = import3.createRenderElement(this.renderer,this._el_1,'div',new import3.InlineArray2(2,'class','picker-days-week-row'),(null as any));
+    this._text_30 = this.renderer.createText(this._el_29,'\n        ',(null as any));
+    this._anchor_31 = this.renderer.createTemplateAnchor(this._el_29,(null as any));
+    this._vc_31 = new import10.ViewContainer(31,29,this,this._anchor_31);
+    this._TemplateRef_31_5 = new import18.TemplateRef_(this,31,this._anchor_31);
+    this._NgFor_31_6 = new import14.Wrapper_NgFor(this._vc_31.vcRef,this._TemplateRef_31_5,this.parentView.injectorGet(import15.IterableDiffers,this.parentIndex),this.ref);
+    this._text_32 = this.renderer.createText(this._el_29,'\n    ',(null as any));
+    this._text_33 = this.renderer.createText(this._el_1,'\n    ',(null as any));
+    this._el_34 = import3.createRenderElement(this.renderer,this._el_1,'div',new import3.InlineArray2(2,'class','picker-days-row'),(null as any));
+    this._text_35 = this.renderer.createText(this._el_34,'\n        ',(null as any));
+    this._anchor_36 = this.renderer.createTemplateAnchor(this._el_34,(null as any));
+    this._vc_36 = new import10.ViewContainer(36,34,this,this._anchor_36);
+    this._TemplateRef_36_5 = new import18.TemplateRef_(this,36,this._anchor_36);
+    this._NgFor_36_6 = new import14.Wrapper_NgFor(this._vc_36.vcRef,this._TemplateRef_36_5,this.parentView.injectorGet(import15.IterableDiffers,this.parentIndex),this.ref);
+    this._text_37 = this.renderer.createText(this._el_34,'\n    ',(null as any));
+    this._text_38 = this.renderer.createText(this._el_1,'\n',(null as any));
+    this._text_39 = this.renderer.createText(parentRenderNode,'\n    ',(null as any));
     var disposable_0:Function = import3.subscribeToRenderElement(this,this._el_5,new import3.InlineArray2(2,'click',(null as any)),this.eventHandler(this.handleEvent_5));
-    var disposable_1:Function = import3.subscribeToRenderElement(this,this._el_13,new import3.InlineArray2(2,'click',(null as any)),this.eventHandler(this.handleEvent_13));
+    var disposable_1:Function = import3.subscribeToRenderElement(this,this._el_19,new import3.InlineArray2(2,'click',(null as any)),this.eventHandler(this.handleEvent_19));
     this.init((null as any),((<any>this.renderer).directRenderer? (null as any): [
       this._text_0,
       this._el_1,
@@ -507,27 +715,39 @@ export class View_MultipleDatePickerComponent0 extends import2.AppView<import0.M
       this._text_4,
       this._el_5,
       this._text_6,
-      this._text_7,
-      this._el_8,
-      this._text_9,
-      this._anchor_10,
-      this._text_11,
+      this._anchor_7,
+      this._text_8,
+      this._anchor_9,
+      this._text_10,
+      this._anchor_11,
       this._text_12,
-      this._el_13,
-      this._text_14,
+      this._text_13,
+      this._el_14,
       this._text_15,
-      this._text_16,
-      this._el_17,
+      this._anchor_16,
+      this._text_17,
       this._text_18,
-      this._anchor_19,
+      this._el_19,
       this._text_20,
-      this._text_21,
-      this._el_22,
-      this._text_23,
-      this._anchor_24,
-      this._text_25,
+      this._anchor_21,
+      this._text_22,
+      this._anchor_23,
+      this._text_24,
+      this._anchor_25,
       this._text_26,
-      this._text_27
+      this._text_27,
+      this._text_28,
+      this._el_29,
+      this._text_30,
+      this._anchor_31,
+      this._text_32,
+      this._text_33,
+      this._el_34,
+      this._text_35,
+      this._anchor_36,
+      this._text_37,
+      this._text_38,
+      this._text_39
     ]
     ),[
       disposable_0,
@@ -537,54 +757,102 @@ export class View_MultipleDatePickerComponent0 extends import2.AppView<import0.M
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import18.NgClass) && ((5 <= requestNodeIndex) && (requestNodeIndex <= 6)))) { return this._NgClass_5_3.context; }
-    if (((token === import17.TemplateRef) && (10 === requestNodeIndex))) { return this._TemplateRef_10_5; }
-    if (((token === import19.NgIf) && (10 === requestNodeIndex))) { return this._NgIf_10_6.context; }
-    if (((token === import18.NgClass) && ((13 <= requestNodeIndex) && (requestNodeIndex <= 14)))) { return this._NgClass_13_3.context; }
-    if (((token === import17.TemplateRef) && (19 === requestNodeIndex))) { return this._TemplateRef_19_5; }
-    if (((token === import20.NgFor) && (19 === requestNodeIndex))) { return this._NgFor_19_6.context; }
-    if (((token === import17.TemplateRef) && (24 === requestNodeIndex))) { return this._TemplateRef_24_5; }
-    if (((token === import20.NgFor) && (24 === requestNodeIndex))) { return this._NgFor_24_6.context; }
+    if (((token === import18.TemplateRef) && (7 === requestNodeIndex))) { return this._TemplateRef_7_5; }
+    if (((token === import19.NgSwitchDefault) && (7 === requestNodeIndex))) { return this._NgSwitchDefault_7_6.context; }
+    if (((token === import18.TemplateRef) && (9 === requestNodeIndex))) { return this._TemplateRef_9_5; }
+    if (((token === import19.NgSwitchCase) && (9 === requestNodeIndex))) { return this._NgSwitchCase_9_6.context; }
+    if (((token === import18.TemplateRef) && (11 === requestNodeIndex))) { return this._TemplateRef_11_5; }
+    if (((token === import19.NgSwitchCase) && (11 === requestNodeIndex))) { return this._NgSwitchCase_11_6.context; }
+    if (((token === import20.NgClass) && ((5 <= requestNodeIndex) && (requestNodeIndex <= 12)))) { return this._NgClass_5_3.context; }
+    if (((token === import18.TemplateRef) && (16 === requestNodeIndex))) { return this._TemplateRef_16_5; }
+    if (((token === import21.NgIf) && (16 === requestNodeIndex))) { return this._NgIf_16_6.context; }
+    if (((token === import18.TemplateRef) && (21 === requestNodeIndex))) { return this._TemplateRef_21_5; }
+    if (((token === import19.NgSwitchDefault) && (21 === requestNodeIndex))) { return this._NgSwitchDefault_21_6.context; }
+    if (((token === import18.TemplateRef) && (23 === requestNodeIndex))) { return this._TemplateRef_23_5; }
+    if (((token === import19.NgSwitchCase) && (23 === requestNodeIndex))) { return this._NgSwitchCase_23_6.context; }
+    if (((token === import18.TemplateRef) && (25 === requestNodeIndex))) { return this._TemplateRef_25_5; }
+    if (((token === import19.NgSwitchCase) && (25 === requestNodeIndex))) { return this._NgSwitchCase_25_6.context; }
+    if (((token === import20.NgClass) && ((19 <= requestNodeIndex) && (requestNodeIndex <= 26)))) { return this._NgClass_19_3.context; }
+    if (((token === import19.NgSwitch) && ((3 <= requestNodeIndex) && (requestNodeIndex <= 27)))) { return this._NgSwitch_3_3.context; }
+    if (((token === import18.TemplateRef) && (31 === requestNodeIndex))) { return this._TemplateRef_31_5; }
+    if (((token === import22.NgFor) && (31 === requestNodeIndex))) { return this._NgFor_31_6.context; }
+    if (((token === import18.TemplateRef) && (36 === requestNodeIndex))) { return this._TemplateRef_36_5; }
+    if (((token === import22.NgFor) && (36 === requestNodeIndex))) { return this._NgFor_36_6.context; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
+    const currVal_3_0_0:any = this.context.arrow;
+    this._NgSwitch_3_3.check_ngSwitch(currVal_3_0_0,throwOnChange,false);
+    this._NgSwitch_3_3.ngDoCheck(this,this._el_3,throwOnChange);
     const currVal_5_0_0:any = 'text-center picker-navigate picker-navigate-left-arrow';
     this._NgClass_5_3.check_klass(currVal_5_0_0,throwOnChange,false);
-    const currVal_5_0_1:any = this._map_39(this.context.disableBackButton);
+    const currVal_5_0_1:any = this._map_70(this.context.disableBackButton);
     this._NgClass_5_3.check_ngClass(currVal_5_0_1,throwOnChange,false);
     this._NgClass_5_3.ngDoCheck(this,this._el_5,throwOnChange);
-    const currVal_10_0_0:any = (this.context.yearsForSelect.length < 2);
-    this._NgIf_10_6.check_ngIf(currVal_10_0_0,throwOnChange,false);
-    this._NgIf_10_6.ngDoCheck(this,this._anchor_10,throwOnChange);
-    const currVal_13_0_0:any = 'text-center picker-navigate picker-navigate-right-arrow';
-    this._NgClass_13_3.check_klass(currVal_13_0_0,throwOnChange,false);
-    const currVal_13_0_1:any = this._map_41(this.context.disableNextButton);
-    this._NgClass_13_3.check_ngClass(currVal_13_0_1,throwOnChange,false);
-    this._NgClass_13_3.ngDoCheck(this,this._el_13,throwOnChange);
-    const currVal_19_0_0:any = this.context.daysOfWeek;
-    this._NgFor_19_6.check_ngForOf(currVal_19_0_0,throwOnChange,false);
-    this._NgFor_19_6.ngDoCheck(this,this._anchor_19,throwOnChange);
-    const currVal_24_0_0:any = this.context.days;
-    this._NgFor_24_6.check_ngForOf(currVal_24_0_0,throwOnChange,false);
-    this._NgFor_24_6.ngDoCheck(this,this._anchor_24,throwOnChange);
-    this._vc_10.detectChangesInNestedViews(throwOnChange);
-    this._vc_19.detectChangesInNestedViews(throwOnChange);
-    this._vc_24.detectChangesInNestedViews(throwOnChange);
-    const currVal_40:any = import3.inlineInterpolate(1,'\n            ',this.context.monthToDisplay,'\n            ');
-    if (import3.checkBinding(throwOnChange,this._expr_40,currVal_40)) {
-      this.renderer.setText(this._text_9,currVal_40);
-      this._expr_40 = currVal_40;
+    this._NgSwitchDefault_7_6.ngDoCheck(this,this._anchor_7,throwOnChange);
+    const currVal_9_0_0:any = 1;
+    this._NgSwitchCase_9_6.check_ngSwitchCase(currVal_9_0_0,throwOnChange,false);
+    this._NgSwitchCase_9_6.ngDoCheck(this,this._anchor_9,throwOnChange);
+    const currVal_11_0_0:any = 2;
+    this._NgSwitchCase_11_6.check_ngSwitchCase(currVal_11_0_0,throwOnChange,false);
+    this._NgSwitchCase_11_6.ngDoCheck(this,this._anchor_11,throwOnChange);
+    const currVal_16_0_0:any = (this.context.yearsForSelect.length < 2);
+    this._NgIf_16_6.check_ngIf(currVal_16_0_0,throwOnChange,false);
+    this._NgIf_16_6.ngDoCheck(this,this._anchor_16,throwOnChange);
+    const currVal_19_0_0:any = 'text-center picker-navigate picker-navigate-right-arrow';
+    this._NgClass_19_3.check_klass(currVal_19_0_0,throwOnChange,false);
+    const currVal_19_0_1:any = this._map_72(this.context.disableNextButton);
+    this._NgClass_19_3.check_ngClass(currVal_19_0_1,throwOnChange,false);
+    this._NgClass_19_3.ngDoCheck(this,this._el_19,throwOnChange);
+    this._NgSwitchDefault_21_6.ngDoCheck(this,this._anchor_21,throwOnChange);
+    const currVal_23_0_0:any = 1;
+    this._NgSwitchCase_23_6.check_ngSwitchCase(currVal_23_0_0,throwOnChange,false);
+    this._NgSwitchCase_23_6.ngDoCheck(this,this._anchor_23,throwOnChange);
+    const currVal_25_0_0:any = 2;
+    this._NgSwitchCase_25_6.check_ngSwitchCase(currVal_25_0_0,throwOnChange,false);
+    this._NgSwitchCase_25_6.ngDoCheck(this,this._anchor_25,throwOnChange);
+    const currVal_31_0_0:any = this.context.daysOfWeek;
+    this._NgFor_31_6.check_ngForOf(currVal_31_0_0,throwOnChange,false);
+    this._NgFor_31_6.ngDoCheck(this,this._anchor_31,throwOnChange);
+    const currVal_36_0_0:any = this.context.days;
+    this._NgFor_36_6.check_ngForOf(currVal_36_0_0,throwOnChange,false);
+    this._NgFor_36_6.ngDoCheck(this,this._anchor_36,throwOnChange);
+    this._vc_7.detectChangesInNestedViews(throwOnChange);
+    this._vc_9.detectChangesInNestedViews(throwOnChange);
+    this._vc_11.detectChangesInNestedViews(throwOnChange);
+    this._vc_16.detectChangesInNestedViews(throwOnChange);
+    this._vc_21.detectChangesInNestedViews(throwOnChange);
+    this._vc_23.detectChangesInNestedViews(throwOnChange);
+    this._vc_25.detectChangesInNestedViews(throwOnChange);
+    this._vc_31.detectChangesInNestedViews(throwOnChange);
+    this._vc_36.detectChangesInNestedViews(throwOnChange);
+    const currVal_71:any = import3.inlineInterpolate(1,'\n            ',this.context.monthToDisplay,'\n            ');
+    if (import3.checkBinding(throwOnChange,this._expr_71,currVal_71)) {
+      this.renderer.setText(this._text_15,currVal_71);
+      this._expr_71 = currVal_71;
     }
   }
   destroyInternal():void {
-    this._vc_10.destroyNestedViews();
-    this._vc_19.destroyNestedViews();
-    this._vc_24.destroyNestedViews();
+    this._vc_7.destroyNestedViews();
+    this._vc_9.destroyNestedViews();
+    this._vc_11.destroyNestedViews();
+    this._vc_16.destroyNestedViews();
+    this._vc_21.destroyNestedViews();
+    this._vc_23.destroyNestedViews();
+    this._vc_25.destroyNestedViews();
+    this._vc_31.destroyNestedViews();
+    this._vc_36.destroyNestedViews();
   }
   createEmbeddedViewInternal(nodeIndex:number):import2.AppView<any> {
-    if ((nodeIndex == 10)) { return new View_MultipleDatePickerComponent1(this.viewUtils,this,10,this._anchor_10,this._vc_10); }
-    if ((nodeIndex == 19)) { return new View_MultipleDatePickerComponent2(this.viewUtils,this,19,this._anchor_19,this._vc_19); }
-    if ((nodeIndex == 24)) { return new View_MultipleDatePickerComponent3(this.viewUtils,this,24,this._anchor_24,this._vc_24); }
+    if ((nodeIndex == 7)) { return new View_MultipleDatePickerComponent1(this.viewUtils,this,7,this._anchor_7,this._vc_7); }
+    if ((nodeIndex == 9)) { return new View_MultipleDatePickerComponent2(this.viewUtils,this,9,this._anchor_9,this._vc_9); }
+    if ((nodeIndex == 11)) { return new View_MultipleDatePickerComponent3(this.viewUtils,this,11,this._anchor_11,this._vc_11); }
+    if ((nodeIndex == 16)) { return new View_MultipleDatePickerComponent4(this.viewUtils,this,16,this._anchor_16,this._vc_16); }
+    if ((nodeIndex == 21)) { return new View_MultipleDatePickerComponent5(this.viewUtils,this,21,this._anchor_21,this._vc_21); }
+    if ((nodeIndex == 23)) { return new View_MultipleDatePickerComponent6(this.viewUtils,this,23,this._anchor_23,this._vc_23); }
+    if ((nodeIndex == 25)) { return new View_MultipleDatePickerComponent7(this.viewUtils,this,25,this._anchor_25,this._vc_25); }
+    if ((nodeIndex == 31)) { return new View_MultipleDatePickerComponent8(this.viewUtils,this,31,this._anchor_31,this._vc_31); }
+    if ((nodeIndex == 36)) { return new View_MultipleDatePickerComponent9(this.viewUtils,this,36,this._anchor_36,this._vc_36); }
     return (null as any);
   }
   handleEvent_5(eventName:string,$event:any):boolean {
@@ -596,7 +864,7 @@ export class View_MultipleDatePickerComponent0 extends import2.AppView<import0.M
     }
     return result;
   }
-  handleEvent_13(eventName:string,$event:any):boolean {
+  handleEvent_19(eventName:string,$event:any):boolean {
     this.markPathToRootAsCheckOnce();
     var result:boolean = true;
     if ((eventName == 'click')) {

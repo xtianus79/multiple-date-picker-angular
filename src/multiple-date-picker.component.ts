@@ -22,6 +22,8 @@ export class MultipleDatePickerComponent implements OnInit, ControlValueAccessor
     @Input() rightClick: string;
     //@Input() month: any;
     @Input() monthChanged: any;
+    @Input() fontAwesome: boolean;
+    @Input() matIcons: boolean;
     @Input() monthClick: string;
     @Input() weekDaysOff: any;
     @Input() allDaysOff: string;
@@ -36,6 +38,7 @@ export class MultipleDatePickerComponent implements OnInit, ControlValueAccessor
     @Input() disableDaysAfter: boolean;
     @Input() changeYearPast: string;
     @Input() changeYearFuture: string;
+    arrow: number = 0;
     month = this.month || moment().startOf('day');  
     @Input() projectScope: any[] = [];
     days: any[] = [];
@@ -49,11 +52,23 @@ export class MultipleDatePickerComponent implements OnInit, ControlValueAccessor
     monthToDisplay: string;
     yearToDisplay: string;
     @Input() sundayFirstDay: boolean;
+
     constructor() { }
+
     ngOnInit(): void {
         this.generate();
         this.daysOfWeek = this.getDaysOfWeek();
+        this.arrowSelected();
     }
+
+    arrowSelected() {
+        if (this.matIcons) {
+            return this.arrow = 1;
+        } else if (this.fontAwesome) {
+            return this.arrow = 2;
+        }
+    }
+
     writeValue(value: any[]) {
         if (value !== undefined) {
             this.projectScope = value;

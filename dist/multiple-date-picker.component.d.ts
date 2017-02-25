@@ -6,6 +6,8 @@ export declare class MultipleDatePickerComponent implements OnInit, ControlValue
     dayHover: string;
     rightClick: string;
     monthChanged: any;
+    fontAwesome: boolean;
+    matIcons: boolean;
     monthClick: string;
     weekDaysOff: any;
     allDaysOff: string;
@@ -20,6 +22,7 @@ export declare class MultipleDatePickerComponent implements OnInit, ControlValue
     disableDaysAfter: boolean;
     changeYearPast: string;
     changeYearFuture: string;
+    arrow: number;
     month: any;
     projectScope: any[];
     days: any[];
@@ -34,6 +37,7 @@ export declare class MultipleDatePickerComponent implements OnInit, ControlValue
     sundayFirstDay: boolean;
     constructor();
     ngOnInit(): void;
+    arrowSelected(): 1 | 2;
     writeValue(value: any[]): void;
     propagateChange: (_: any) => void;
     registerOnChange(fn: any): void;
