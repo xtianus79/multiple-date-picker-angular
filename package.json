@@ -1,6 +1,6 @@
 {
   "name": "multiple-date-picker-a2",
-  "version": "2.5.1",
+  "version": "2.5.2",
   "description": "Multiple Date Picker for Angular* (angular 2+)",
   "main": "index.js",
   "scripts": {

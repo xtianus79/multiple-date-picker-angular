@@ -5,7 +5,6 @@ export declare class MultipleDatePickerComponent implements OnInit, ControlValue
     dayClick: string;
     dayHover: string;
     rightClick: string;
-    month: any;
     monthChanged: any;
     monthClick: string;
     weekDaysOff: any;
@@ -21,6 +20,7 @@ export declare class MultipleDatePickerComponent implements OnInit, ControlValue
     disableDaysAfter: boolean;
     changeYearPast: string;
     changeYearFuture: string;
+    month: any;
     projectScope: any[];
     days: any[];
     _weekDaysOff: any;

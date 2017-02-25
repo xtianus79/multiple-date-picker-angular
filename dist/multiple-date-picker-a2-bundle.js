@@ -49,7 +49,7 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
             MultipleDatePickerComponent = MultipleDatePickerComponent_1 = (function () {
                 function MultipleDatePickerComponent() {
                     this.cssDaysOfSurroundingMonths = this.cssDaysOfSurroundingMonths || 'picker-empty';
-                    // month = this.month || moment().startOf('day');  // can use this instead of placing in the contructor // ask about purpose of having potenial input for month
+                    this.month = this.month || moment().startOf('day');
                     this.projectScope = [];
                     this.days = [];
                     this._weekDaysOff = this._weekDaysOff || [];
@@ -60,7 +60,6 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
                     // _cssDaysOfSurroundingMonths: any = this._cssDaysOfSurroundingMonths || 'picker-empty';
                     this.yearsForSelect = [];
                     this.propagateChange = function (_) { };
-                    this.month = this.month || moment().startOf('day');
                 }
                 MultipleDatePickerComponent.prototype.ngOnInit = function () {
                     this.generate();
@@ -68,15 +67,18 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
                 };
                 MultipleDatePickerComponent.prototype.writeValue = function (value) {
                     var _this = this;
-                    // console.log('the value = ' + JSON.stringify(value));
                     if (value !== undefined) {
                         this.projectScope = value;
                         if (value !== null) {
+                            this.projectScope = this.projectScope.map(function (val) {
+                                return moment(val);
+                            });
                             this.projectScope.forEach(function (val) {
-                                var day = moment(val);
+                                var day = val;
                                 _this.days.forEach(function (d) {
                                     if (d.date.isSame(day)) {
                                         d.mdp.selected = true;
+                                        return;
                                     }
                                 });
                             });
@@ -342,10 +344,6 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
                 core_1.Input(),
                 __metadata("design:type", String)
             ], MultipleDatePickerComponent.prototype, "rightClick", void 0);
-            __decorate([
-                core_1.Input(),
-                __metadata("design:type", Object)
-            ], MultipleDatePickerComponent.prototype, "month", void 0);
             __decorate([
                 core_1.Input(),
                 __metadata("design:type", Object)

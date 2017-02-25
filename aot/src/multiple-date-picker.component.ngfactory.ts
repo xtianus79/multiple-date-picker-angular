@@ -52,7 +52,6 @@ export class Wrapper_MultipleDatePickerComponent {
   /*private*/ _expr_19:any;
   /*private*/ _expr_20:any;
   /*private*/ _expr_21:any;
-  /*private*/ _expr_22:any;
   constructor() {
     this._changed = false;
     this.context = new import0.MultipleDatePickerComponent();
@@ -78,7 +77,6 @@ export class Wrapper_MultipleDatePickerComponent {
     this._expr_19 = import1.UNINITIALIZED;
     this._expr_20 = import1.UNINITIALIZED;
     this._expr_21 = import1.UNINITIALIZED;
-    this._expr_22 = import1.UNINITIALIZED;
   }
   ngOnDetach(view:import2.AppView<any>,componentView:import2.AppView<any>,el:any):void {
   }
@@ -112,137 +110,130 @@ export class Wrapper_MultipleDatePickerComponent {
       this._expr_3 = currValue;
     }
   }
-  check_month(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_monthChanged(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_4,currValue))) {
       this._changed = true;
-      this.context.month = currValue;
+      this.context.monthChanged = currValue;
       this._expr_4 = currValue;
     }
   }
-  check_monthChanged(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_monthClick(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_5,currValue))) {
       this._changed = true;
-      this.context.monthChanged = currValue;
+      this.context.monthClick = currValue;
       this._expr_5 = currValue;
     }
   }
-  check_monthClick(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_weekDaysOff(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_6,currValue))) {
       this._changed = true;
-      this.context.monthClick = currValue;
+      this.context.weekDaysOff = currValue;
       this._expr_6 = currValue;
     }
   }
-  check_weekDaysOff(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_allDaysOff(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_7,currValue))) {
       this._changed = true;
-      this.context.weekDaysOff = currValue;
+      this.context.allDaysOff = currValue;
       this._expr_7 = currValue;
     }
   }
-  check_allDaysOff(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_daysAllowed(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_8,currValue))) {
       this._changed = true;
-      this.context.allDaysOff = currValue;
+      this.context.daysAllowed = currValue;
       this._expr_8 = currValue;
     }
   }
-  check_daysAllowed(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_disableNavigation(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_9,currValue))) {
       this._changed = true;
-      this.context.daysAllowed = currValue;
+      this.context.disableNavigation = currValue;
       this._expr_9 = currValue;
     }
   }
-  check_disableNavigation(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_disallowBackPastMonths(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_10,currValue))) {
       this._changed = true;
-      this.context.disableNavigation = currValue;
+      this.context.disallowBackPastMonths = currValue;
       this._expr_10 = currValue;
     }
   }
-  check_disallowBackPastMonths(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_disallowGoFuturMonths(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_11,currValue))) {
       this._changed = true;
-      this.context.disallowBackPastMonths = currValue;
+      this.context.disallowGoFuturMonths = currValue;
       this._expr_11 = currValue;
     }
   }
-  check_disallowGoFuturMonths(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_showDaysOfSurroundingMonths(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_12,currValue))) {
       this._changed = true;
-      this.context.disallowGoFuturMonths = currValue;
+      this.context.showDaysOfSurroundingMonths = currValue;
       this._expr_12 = currValue;
     }
   }
-  check_showDaysOfSurroundingMonths(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_cssDaysOfSurroundingMonths(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_13,currValue))) {
       this._changed = true;
-      this.context.showDaysOfSurroundingMonths = currValue;
+      this.context.cssDaysOfSurroundingMonths = currValue;
       this._expr_13 = currValue;
     }
   }
-  check_cssDaysOfSurroundingMonths(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_fireEventsForDaysOfSurroundingMonths(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_14,currValue))) {
       this._changed = true;
-      this.context.cssDaysOfSurroundingMonths = currValue;
+      this.context.fireEventsForDaysOfSurroundingMonths = currValue;
       this._expr_14 = currValue;
     }
   }
-  check_fireEventsForDaysOfSurroundingMonths(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_disableDaysBefore(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_15,currValue))) {
       this._changed = true;
-      this.context.fireEventsForDaysOfSurroundingMonths = currValue;
+      this.context.disableDaysBefore = currValue;
       this._expr_15 = currValue;
     }
   }
-  check_disableDaysBefore(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_disableDaysAfter(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_16,currValue))) {
       this._changed = true;
-      this.context.disableDaysBefore = currValue;
+      this.context.disableDaysAfter = currValue;
       this._expr_16 = currValue;
     }
   }
-  check_disableDaysAfter(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_changeYearPast(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_17,currValue))) {
       this._changed = true;
-      this.context.disableDaysAfter = currValue;
+      this.context.changeYearPast = currValue;
       this._expr_17 = currValue;
     }
   }
-  check_changeYearPast(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_changeYearFuture(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_18,currValue))) {
       this._changed = true;
-      this.context.changeYearPast = currValue;
+      this.context.changeYearFuture = currValue;
       this._expr_18 = currValue;
     }
   }
-  check_changeYearFuture(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_projectScope(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_19,currValue))) {
       this._changed = true;
-      this.context.changeYearFuture = currValue;
+      this.context.projectScope = currValue;
       this._expr_19 = currValue;
     }
   }
-  check_projectScope(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check_sundayFirstDay(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_20,currValue))) {
       this._changed = true;
-      this.context.projectScope = currValue;
+      this.context.sundayFirstDay = currValue;
       this._expr_20 = currValue;
     }
   }
-  check_sundayFirstDay(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+  check__projectScope(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
     if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_21,currValue))) {
       this._changed = true;
-      this.context.sundayFirstDay = currValue;
-      this._expr_21 = currValue;
-    }
-  }
-  check__projectScope(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
-    if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_22,currValue))) {
-      this._changed = true;
       this.context._projectScope = currValue;
-      this._expr_22 = currValue;
+      this._expr_21 = currValue;
     }
   }
   ngDoCheck(view:import2.AppView<any>,el:any,throwOnChange:boolean):boolean {

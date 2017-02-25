@@ -20,7 +20,7 @@ export class MultipleDatePickerComponent implements OnInit, ControlValueAccessor
     @Input() dayClick: string;
     @Input() dayHover: string;
     @Input() rightClick: string;
-    @Input() month: any;
+    //@Input() month: any;
     @Input() monthChanged: any;
     @Input() monthClick: string;
     @Input() weekDaysOff: any;
@@ -36,7 +36,7 @@ export class MultipleDatePickerComponent implements OnInit, ControlValueAccessor
     @Input() disableDaysAfter: boolean;
     @Input() changeYearPast: string;
     @Input() changeYearFuture: string;
-    // month = this.month || moment().startOf('day');  // can use this instead of placing in the contructor // ask about purpose of having potenial input for month
+    month = this.month || moment().startOf('day');  
     @Input() projectScope: any[] = [];
     days: any[] = [];
     _weekDaysOff: any = this._weekDaysOff || [];
@@ -49,23 +49,24 @@ export class MultipleDatePickerComponent implements OnInit, ControlValueAccessor
     monthToDisplay: string;
     yearToDisplay: string;
     @Input() sundayFirstDay: boolean;
-    constructor() { 
-        this.month = this.month || moment().startOf('day');
-    }
+    constructor() { }
     ngOnInit(): void {
         this.generate();
         this.daysOfWeek = this.getDaysOfWeek();
     }
     writeValue(value: any[]) {
-        // console.log('the value = ' + JSON.stringify(value));
         if (value !== undefined) {
             this.projectScope = value;
             if (value !== null) {
+                this.projectScope = this.projectScope.map((val: Date) => {
+                    return moment(val);
+                });
                 this.projectScope.forEach((val: Date) => {
-                let day = moment(val);
+                let day = val;
                 this.days.forEach((d) => {
                     if(d.date.isSame(day)){
                         d.mdp.selected = true;
+                        return;
                     }
                 });
             });
