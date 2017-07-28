@@ -81,8 +81,13 @@ export const DEFAULT_STYLES = `
         color: #000
     }
     
-    .picker-day.today,.picker-day.today.picker-off,.picker-day.today.picker-off:hover,.picker-day.today.picker-selected,.picker-day.today:hover {
+    .picker-day.today.picker-off,.picker-day.today.picker-off:hover,.picker-day.today.picker-selected,.picker-day.today:hover {
         color: #00a3ff
+    }
+
+    .picker-day.today {
+        background-color: #00a5ce;
+        color: #f7fb65;
     }
     
     .picker-day:not(.picker-off):not(.picker-empty):hover {
