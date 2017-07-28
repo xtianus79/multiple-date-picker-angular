@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { MultipleDatePickerComponent } from './multiple-date-picker.component'
+
+// add DateClicked Helper to providers if used in future. remember to add to index.ts for export
+import { MultipleDatePickerComponent, DateRangeHelper, DateClickedDirective } from './index';
 
 @NgModule({
     imports: [
@@ -10,6 +12,10 @@ import { MultipleDatePickerComponent } from './multiple-date-picker.component'
     ],
     declarations: [
         MultipleDatePickerComponent,
+        DateClickedDirective
+    ],
+    providers: [
+        DateRangeHelper
     ],
     exports: [MultipleDatePickerComponent]
 })

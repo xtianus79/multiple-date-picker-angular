@@ -1,8 +1,3 @@
-/**
- * The default multiple date picker was orginated from here... styles and structure can be associated
- * from arca-computing https://arca-computing.github.io/MultipleDatePicker/
- */
-
 export const DEFAULT_TEMPLATE = `
 <div class="multiple-date-picker">
     <div class="picker-top-row" [ngSwitch]="arrow">
@@ -26,12 +21,12 @@ export const DEFAULT_TEMPLATE = `
         <div class="text-center" *ngFor="let weekDays of daysOfWeek">{{weekDays}}</div>
     </div>
     <div class="picker-days-row">
-        <div class="text-center picker-day {{getDayClasses(day)}}" title="{{day.title}}" *ngFor="let day of days" (click)="toggleDay($event, day)" >
+        <div dateClicked class="text-center picker-day {{getDayClasses(day)}}" title="{{day.title}}" *ngFor="let day of days" (click)="toggleDay($event, day)" >
             {{day ? day.mdp.otherMonth && !showDaysOfSurroundingMonths ? '&nbsp;' : day.date.format('D') : ''}}
         </div>
     </div>
 </div>
-    `;
+`;
 
 export const DEFAULT_STYLES = `
     .text-center {
@@ -91,14 +86,18 @@ export const DEFAULT_STYLES = `
     }
     
     .picker-day:not(.picker-off):not(.picker-empty):hover {
-        background-color: #C6000B;
-        color: #fff;
-        cursor: pointer
+        background-color: rgba(0, 165, 206, 0.5);
+        color: #f7fb65;
     }
     
     .picker-day.picker-selected {
-        background-color: #C6000B;
-        color: #fff
+        background-color: #d0d425;
+        color: #568eab;
+    }
+    
+    .picker-day.picker-selected.click-selection-active:not(.picker-off) {
+        background-color: #d0d425;
+        color: #568eab;
     }
     
     .picker-day.picker-off,.picker-day.picker-off:hover {
@@ -112,11 +111,46 @@ export const DEFAULT_STYLES = `
         cursor: default
     }
     
+    .picker-day.stay-dates {
+        background-color: #78BC42;
+        color: #fff;
+    }
+    
+    .picker-day.stay-dates.picker-selected {
+        background-color: #d0d425;
+        color: #568eab;
+    }
+    
+    .picker-day.today.stay-dates {
+        background-color: #00a5ce;
+        color: #f7fb65;
+    }
+    
+    .picker-day.today.stay-dates.picker-selected {
+        background-color: #d0d425;
+        color: #568eab;
+    }
+    
+    .picker-day.stay-dates.picker-off {
+        background-color: rgba(91, 136, 56, 0.6);
+        color: rgba(255, 255, 255, 0.6);
+    }
+    
+    .picker-day.stay-dates:not(.picker-off):hover{
+        background-color: rgba(0, 165, 206, 0.5);
+        color: #f7fb65;
+    }
+    
+    .picker-day.stay-dates.picker-selected.click-selection-active:not(.picker-off) {
+        background-color: #d0d425;
+        color: #568eab;
+    }
+    
     input {
-            border: 0;
-            border-radius: 3px;
-            height: 30px;
-            max-width: 100px;
-            text-align: center;
-        }
-    `;
+        border: 0;
+        border-radius: 3px;
+        height: 30px;
+        max-width: 100px;
+        text-align: center;
+    }
+`;

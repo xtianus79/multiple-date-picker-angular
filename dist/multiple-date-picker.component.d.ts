@@ -1,15 +1,16 @@
 import { OnInit } from '@angular/core';
 import { ControlValueAccessor } from '@angular/forms';
+import * as moment from 'moment/moment';
 export declare class MultipleDatePickerComponent implements OnInit, ControlValueAccessor {
-    highlightDays: any;
-    dayClick: string;
+    highlightDays: Array<any>;
+    dayClick: any;
     dayHover: string;
     rightClick: string;
     monthChanged: any;
     fontAwesome: boolean;
     matIcons: boolean;
     monthClick: string;
-    weekDaysOff: any;
+    weekDaysOff: Array<number>;
     allDaysOff: string;
     daysAllowed: any;
     disableNavigation: boolean;
@@ -18,15 +19,15 @@ export declare class MultipleDatePickerComponent implements OnInit, ControlValue
     showDaysOfSurroundingMonths: boolean;
     cssDaysOfSurroundingMonths: any;
     fireEventsForDaysOfSurroundingMonths: string;
-    disableDaysBefore: boolean;
-    disableDaysAfter: boolean;
+    disableDaysBefore: any;
+    disableDaysAfter: any;
     changeYearPast: string;
     changeYearFuture: string;
     arrow: number;
-    month: any;
+    monthAdjustment: any;
+    month: moment.Moment;
     projectScope: any[];
     days: any[];
-    _weekDaysOff: any;
     daysOff: any;
     disableBackButton: any;
     disableNextButton: any;
@@ -46,7 +47,7 @@ export declare class MultipleDatePickerComponent implements OnInit, ControlValue
     projectScope2: any[];
     checkNavigationButtons(): void;
     getDaysOfWeek(): any[];
-    getMonthYearToDisplay(): any;
+    getMonthYearToDisplay(): string;
     getYearsForSelect(): any[];
     toggleDay(event: any, day: any): void;
     clearDays(): void;
