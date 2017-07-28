@@ -197,7 +197,7 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
                 MultipleDatePickerComponent.prototype.clearDays = function () {
                     this.projectScope = [];
                     this.generate();
-                    // console.log('clearDays was fired off'); // for testing
+                    console.log('clearDays was fired off'); // for testing
                 };
                 MultipleDatePickerComponent.prototype.runGenerate = function () {
                     this.generate();

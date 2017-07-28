@@ -147,7 +147,9 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     }
 ```
 
-Again, I will update the documenation more specifically with functionality and usage but this should get you started. 
+Again, I will update the documenation more specifically with functionality and usage but this should get you started.
+
+More to come!
 
 previous repo information
 <https://github.com/arca-computing/MultipleDatePicker>

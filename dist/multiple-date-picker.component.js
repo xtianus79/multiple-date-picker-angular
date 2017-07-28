@@ -161,7 +161,7 @@ var MultipleDatePickerComponent = (function () {
     MultipleDatePickerComponent.prototype.clearDays = function () {
         this.projectScope = [];
         this.generate();
-        // console.log('clearDays was fired off'); // for testing
+        console.log('clearDays was fired off'); // for testing
     };
     MultipleDatePickerComponent.prototype.runGenerate = function () {
         this.generate();
