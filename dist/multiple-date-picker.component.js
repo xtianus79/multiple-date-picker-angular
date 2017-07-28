@@ -119,15 +119,7 @@ var MultipleDatePickerComponent = (function () {
             prevented = true;
         };
         if (typeof this.dayClick == 'function') {
-            if (!day.mdp.selected) {
-                this.projectScope = [day.date];
-                this.generate();
-                this.dayClick(event, day);
-            }
-            else {
-                this.clearDays();
-                this.dayClick(event, day);
-            }
+            this.dayClick(event, day);
         }
         if (day.selectable && !prevented) {
             day.mdp.selected = !day.mdp.selected;
