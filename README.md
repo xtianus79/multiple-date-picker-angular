@@ -1,5 +1,4 @@
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/arca-computing/MultipleDatePicker?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![SayThanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/mgohin)
+[Badges Here]
 
 This is a forked / rewrite of the multiple-date-picker that was used for AngularJS / Angular 1
 The URL to that repo are in notations below

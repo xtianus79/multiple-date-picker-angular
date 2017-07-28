@@ -29,7 +29,8 @@
     "url": "https://github.com/xtianus79/multiple-date-picker-angular"
   },
   "bugs": {
-    "url": "https://github.com/xtianus79/multiple-date-picker-angular/issues"
+    "url": "https://github.com/xtianus79/multiple-date-picker-angular/issues",
+    "email" : "xtianus@live.com"
   },
   "author": "Christian Matthias Holes <xtianus@live.com>",
   "license": "MIT",
