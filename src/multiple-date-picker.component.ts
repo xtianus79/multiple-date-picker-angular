@@ -204,7 +204,7 @@ export class MultipleDatePickerComponent implements OnInit, ControlValueAccessor
     clearDays() {
         this.projectScope = [];
         this.generate();
-         // console.log('clearDays was fired off'); // for testing
+         console.log('clearDays was fired off'); // for testing
     }
     runGenerate() {
         this.generate();

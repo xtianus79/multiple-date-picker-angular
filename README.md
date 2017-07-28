@@ -1,126 +1,153 @@
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/arca-computing/MultipleDatePicker?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![SayThanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/mgohin)
 
+This is a forked / rewrite of the multiple-date-picker that was used for AngularJS / Angular 1
+The URL to that repo are in notations below
+
+
+In this version it has aptly been title multiple-date-picker-angular which we/I will do everything I can to make these features and usage available for Angular 2 and beyond. 
+
+If there is a feature change that breaks that mold i.e. renderer2 for example... I will cut off that repo re-title the repo multiple-date-picker-a2 or a4, so on. 
+
 #What's new ?
+* Complete Re-write for use with Angular 2+, Angualar 4+ and Angular 5+
+* Date Range Calculator -- Allows a user/variable to enter a start and end date with will create an array of dates that span the start / end date ranges
+* Date Click Helper file turns the color of square space to the clicked on color so that the end user knows a date has been selected upon clicking
 
-###Version 2.1.1
-Fixed [#80](https://github.com/arca-computing/MultipleDatePicker/issues/80)
 
-###Version 2.1.0
-New feature : monthClick -> [#78](https://github.com/arca-computing/MultipleDatePicker/issues/78)
+Version 3.0.0
+Fixed bugs and various updates
 
-###Version 2.0.16
-Merge [#76](https://github.com/arca-computing/MultipleDatePicker/pull/76)
+* New Feature: Date range picker
 
-###Version 2.0.15
-Merged [#75](https://github.com/arca-computing/MultipleDatePicker/pull/75)
-Renamed generated css file to `multipleDatePicker.css`
+* New Enhancement: day click css feedback
 
-###Version 2.0.14
-Updated bower.json
+Version 2.5.3
 
-###Version 2.0.13
-Fixed [#74](https://github.com/arca-computing/MultipleDatePicker/issues/74)
+* Ported to Angular 2/4: working on Angular 2 and Angular 4 with Typescript AOT build process
 
-###Version 2.0.12
-Merged [#73](https://github.com/arca-computing/MultipleDatePicker/pull/73)
+This is a preliminary basic usage example... I will update this further and build a plunkr which will further exhibit features and functionality
 
-###Version 2.0.11
-Fixed [#71](https://github.com/arca-computing/MultipleDatePicker/issues/71)
 
-###Version 2.0.10
-Fixed [#70](https://github.com/arca-computing/MultipleDatePicker/pull/70)
+In your main components HTML be sure to add this... you can use all or only the [(ngmodel)] properties.
+```
+<div>
+    <multiple-date-picker 
+        [showDaysOfSurroundingMonths]="false" 
+        [matIcons]="true" 
+        [disallowBackPastMonths]="true" 
+        [sundayFirstDay]="true" 
+        [disableDaysBefore]="true"
+        [disableDaysAfter]="false" 
+        [monthChanged]="logMonthChanged"
+        [highlightDays]="highlightDays"
+        [dayClick]="oneDaySelectionOnly"
+        [weekDaysOff]="[0, 3]"
+        [month]="myMonth" 
+        [(ngModel)]="initialCount">
+    </multiple-date-picker>
+</div>
+```
 
-###Version 2.0.9
-merged [#69](https://github.com/arca-computing/MultipleDatePicker/pull/69)
-moved demo to sub-folder instead of gh-pages branch [Simpler Github Pages publishing](https://github.com/blog/2228-simpler-github-pages-publishing)
+The folowing should be included in your components.ts file
+Be sure to set the project [(ngModel)] to a blank array
+i.e. ***Setting project scope.
+this.initialCount = [];
 
-###Version 2.0.8
-fixed [#68](https://github.com/arca-computing/MultipleDatePicker/issues/68)
+```
+import { Component, OnInit, Input, AfterViewInit, ViewChild } from '@angular/core';
+import { MultipleDatePicker, DateRangeHelper } from '../multiple-date-picker/index';
+import * as moment from 'moment/moment';
 
-###Version 2.0.7
-Fixed a problem with ngAnimate and css #54
+@Component({
+  ...
+})
 
-###Version 2.0.6
-Now watch `month` so if you change it, calendar will update. Should have done it a long time ago :)
+// this shows example usage
+export class DashboardComponent implements OnInit, AfterViewInit { 
 
-###Version 2.0.5
-New option to quickly change year `change-year-past` & `change-year-future`
+    highlightDays: any[];
+    initialCount: Array<any>; // this is the [(ngModel)] property
+    datesArray: Array<any>;
+    myMonth: any;
 
-Updated demo page too
+    testItems: any[] = [
+        {'item': 'array1', 'id': 1},
+        {'item': 'array2', 'id': 2},
+        {'item': 'array3', 'id': 3},
+    ]  // potential use if person wanted to create a choosen item to associate with a list of arrays
 
-###Version 2.0.4
-Fixed #59 - Now you can disable the navigation with `disable-navigation`
+    constructor(
+        ...
+    ) { }
 
-Updated demo page too
+    // * you don't have to use @ViewChild as itthis is used if you want to use some functions within the
+    // multiple-date-picker that will help in testing and construction of your design.
+    // For example: findArrayofDays() { console.log('this.projectScope = ' + this.projectScope); }
+    // clearDays() { this.projectScope = []; this.generate(); // console.log('clearDays was fired off');}
+    // and runGenerate() { this.generate(); } // remove this and from html
+    @ViewChild(MultipleDatePicker) private multipleDatePicker: MultipleDatePicker;
 
-###Version 2.0.3
-Fixed #60 - Now listen to moment.locale change so change month and days labels.
+    ngOnInit(): void {
+        this.heroService.getHeroes()
+            .then(heroes => this.heroes = heroes.slice(1, 5));
+            // console.log('this is here = ' + matIcons);
 
-Updated demo page too
+        // set array to either [] or the following values like example below
+         this.highlightDays = [
+            {date: moment().date(22).valueOf(), css: 'holiday', selectable: false, title: 'Holiday time !'},
+            {date: moment().date(25).valueOf(), css: 'off', selectable: false, title: 'We don\'t work today'},
+            {date: moment().date(30).valueOf(), css: 'birthday', selectable: true, title: 'I\'m thir... i\'m 28, seriously, I mean ...'}
+         ];
 
-###Major version 2.0.0
-Fixing #50 and giving the directive a much better way to get/pass dates or interact with it : `ngModel`. 
+        // examples to work with
+        console.log('date: moment().date(19).valueOf() ', moment().date(19).valueOf());
+        console.log('date: moment().date(20).valueOf() ', moment().date(20).valueOf());
+        console.log('date: moment().date(21).valueOf() ', moment().date(21).valueOf());
 
-I removed the way to reset a datepicker, because of the ngModel, no need of complex broadcast with ids, that was a silly id of me :)
+        // ***Setting project scope.
+        this.initialCount = [];
 
-I also removed the bower script to use gulp, much better to me.
+        // enter variables for startDates and End dates
+        let startDate = 1509768000000; // enter variable or ms value
+        let endDate = 1510722000000; // enter variable or ms value // 1502510400000
 
-Minor fixes will come to improve again the directive and documentation.
+        // console.log('calucator values ' + this.dateRangeHelper.dateRangeDaysCalculator(endDate, startDate))
 
-Check the demo !
+        if (DateRangeHelper.dateRangeDaysCalculator(endDate, startDate) >= 0) {
+            let days = DateRangeHelper.dateRangeDaysCalculator(endDate, startDate);
+            this.datesArray = DateRangeHelper.getDates(new Date(startDate), (new Date(startDate)).addDays(days)); // date object used not moment in this case
+            console.log('this.datesArray ', this.datesArray);
+        }
 
-###Version 1.4.1
-Fixed #44
- 
-###Version 1.4.0
-Removed deprecated functions and updates package.json.
+        // takes array dates from daterangehelper and adds them to highlighted days for date picker day highlights
+        if (this.datesArray !== undefined && this.datesArray.length > 0) {
+            let daysArray = this.datesArray;
+            let arrayObject = daysArray.find(x => x);
+            let arrayKeys = Object.keys(daysArray);
+            if (arrayObject !== undefined && arrayKeys.length > 0) {
+                this.highlightDays = this.datesArray;
+                let stayNames = 'Christian Smith' // should be set to variable 
+                for (let i in daysArray) {
+                    if (true) {
+                        this.highlightDays.push({date: daysArray[i], css: 'stay-dates', selectable: true, title: `days off for ${stayNames}`});  // set strings
+                    }
+                }
+            }
+        }
 
-###Version 1.3.4
-Added `disableDaysBefore` and `disableDaysAfter`. Check the demo.
+        // calculate addional months to add onto the month object... if this is corrupt in anyway it will default to todays month info
+        let monthsFromToday = DateRangeHelper.dateRangeMonthsCalculator(startDate);
+        if (monthsFromToday > 0) {
+            // this.myMonth = moment().add(monthsFromToday, 'months');
+        } else {
+            this.myMonth = moment().startOf('day');
+        }
 
-###Version 1.3.3
-Improving `showDaysOfSurroundingMonths` with `cssDaysOfSurroundingMonths` and `fireEventsForDaysOfSurroundingMonths`. Check the demo.
+    }
+```
 
-###Version 1.3.2
-Adding `showDaysOfSurroundingMonths`. Check the demo.
+Again, I will update the documenation more specifically with functionality and usage but this should get you started. 
 
-###Version 1.3.1
-Adding MIT LICENSE :)
-
-###Version 1.3.0
-Adding `multipleDatePickerBroadcast` to broadcast orders to calendar. Check the demo.
-
-###Version 1.2.1
-Merged [PR#35](https://github.com/arca-computing/MultipleDatePicker/pull/35) to add past and future classes to dates
-
-###Version 1.2.0
-From a good idea of [Asopus](https://github.com/Asopus) I added a new property : **highlight-days** so **days-off** becomes deprecated.
-
-As usual, check the demo page [http://arca-computing.github.io/MultipleDatePicker/](http://arca-computing.github.io/MultipleDatePicker/)
-###Version 1.1.6
-Fixed an unselection problem
-
-###Version 1.1.X
-Some bugs fix and improvements, check demo
-
-###Version 1.1.0
-[Soyuka](https://github.com/soyuka) improved the library, you now have events in your callback, so you can play with it. He also add a new callback when you over a day. Check out the demo page !
-
-The parameter "callback" has been deprecated, it's still working but will be removed in a next version, please update.
-
-#What is MultipleDatePicker ?
-MultipleDatePicker is an Angular directive to show a simple calendar allowing user to select multiple dates, a callback is called, you can specify some off days or already selected days.
-
-#Install and demo
-[http://arca-computing.github.io/MultipleDatePicker/](http://arca-computing.github.io/MultipleDatePicker/)
-
-#They use it
-![EatStreet](http://eatstreet.com/redesign/img/svg/svg-logo-alternate.svg) [eatstreet.com](https://eatstreet.com)
-
-[roadatlas.eu](https://roadatlas.eu/)
-
-You use it too ? Tell us [here on Gitter](https://gitter.im/arca-computing/MultipleDatePicker?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) or [open an issue](https://github.com/arca-computing/MultipleDatePicker/issues)
-
-#What's next ?
-We created this directive to have a simple calendar with multi-dates selection. We will keep it simple but any improvement is welcome.
+previous repo information
+<https://github.com/arca-computing/MultipleDatePicker>
