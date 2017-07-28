@@ -26,12 +26,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/xtianus79/multiple-date-picker-a2"
+    "url": "https://github.com/xtianus79/multiple-date-picker-angular"
   },
   "bugs": {
-    "url": "https://github.com/xtianus79/multiple-date-picker-a2/issues"
+    "url": "https://github.com/xtianus79/multiple-date-picker-angular/issues"
   },
-  "author": "Christian Holes <xtianus@live.com>",
+  "author": "Christian Matthias Holes <xtianus@live.com>",
   "license": "MIT",
   "devDependencies": {
     "@angular/animations": "4.3.2",

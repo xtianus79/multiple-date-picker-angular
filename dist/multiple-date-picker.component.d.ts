@@ -26,12 +26,12 @@ export declare class MultipleDatePickerComponent implements OnInit, ControlValue
     arrow: number;
     monthAdjustment: any;
     month: moment.Moment;
-    projectScope: any[];
-    days: any[];
+    projectScope: Array<any>;
+    days: Array<any>;
     daysOff: any;
     disableBackButton: any;
     disableNextButton: any;
-    daysOfWeek: any[];
+    daysOfWeek: Array<any>;
     yearsForSelect: any;
     monthToDisplay: string;
     yearToDisplay: string;

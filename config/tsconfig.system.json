@@ -6,7 +6,7 @@
     "experimentalDecorators": true,
     "sourceMap": false,
     "moduleResolution": "node",
-    "outFile": "../dist/multiple-date-picker-a2-bundle.js"
+    "outFile": "../dist/multiple-date-picker-angular-bundle.js"
   },
   "files": [
     "../src/multiple-date-picker.module.ts"

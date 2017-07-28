@@ -39,7 +39,7 @@ module.exports = function (env) {
             loaders: [
                 {
                     test: /\.ts$/,
-                    loaders: aotMode ? ['@ngtools/webpack'] : ['ts-loader?configFileName=config/tsconfig.demo.json', 'angular2-template-loader']
+                    loaders: aotMode ? ['@ngtools/webpack'] : ['ts-loader?configFileName=config/tsconfig.cjs.json', 'angular2-template-loader']
                 },
                 {test: /\.css/, loader: 'raw'},
                 {test: /\.json/, loader: 'json'},
@@ -69,7 +69,7 @@ module.exports = function (env) {
     if (aotMode) {
         config.plugins.push(new webpack.optimize.OccurrenceOrderPlugin(true));
         config.plugins.push(new ngtools.AotPlugin({
-            tsConfigPath: './config/tsconfig.demo.aot.json',
+            tsConfigPath: './config/tsconfig.cjs.json',
             entryModule: path.resolve(__dirname, '..', 'docs/src/demo.module#DemoModule'),
             baseDir: path.resolve(__dirname, '..'),
             genDir: path.resolve(__dirname, '..', './docs/ngfactory')

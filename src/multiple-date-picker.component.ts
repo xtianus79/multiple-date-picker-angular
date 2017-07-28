@@ -40,12 +40,12 @@ export class MultipleDatePickerComponent implements OnInit, ControlValueAccessor
     arrow: number = 0;
     monthAdjustment: any;
     @Input() month = moment().startOf('day');  // today's day at start of day midnight or passed in value
-    @Input() projectScope: any[] = [];
-    days: any[] = [];
+    @Input() projectScope: Array<any> = [];
+    days: Array<any> = [];
     daysOff: any = this.daysOff || [];
     disableBackButton: any = false;
     disableNextButton: any = false;
-    daysOfWeek: any[] = [];
+    daysOfWeek: Array<any> = [];
     // _cssDaysOfSurroundingMonths: any = this._cssDaysOfSurroundingMonths || 'picker-empty';
     yearsForSelect: any = [];
     monthToDisplay: string;
@@ -165,7 +165,14 @@ export class MultipleDatePickerComponent implements OnInit, ControlValueAccessor
             prevented = true;
         }
         if (typeof this.dayClick == 'function') {
-            this.dayClick(event, day);
+            if (!day.mdp.selected) {
+                this.projectScope = [day.date];
+                this.generate();
+                this.dayClick(event, day);
+            } else {
+                this.clearDays();
+                this.dayClick(event, day);
+            }
         }
         if (day.selectable && !prevented) {
             day.mdp.selected = !day.mdp.selected;
