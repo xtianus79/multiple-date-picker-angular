@@ -232,15 +232,20 @@ export class MultipleDatePickerComponent implements OnInit, ControlValueAccessor
         }
         if (day.mdp.today) {
             if (this.highlightDays !== undefined && this.highlightDays.length > 0) {
-                let arrayObject = this.highlightDays.find(x => x.css);
-                // let index = this.highlightDays.indexOf(arrayObject); // gives number of occurenses in array
-                let arrayKeys = Object.keys(this.highlightDays);
-                if (arrayObject !== undefined && arrayKeys.length > 0) {
+                let arrayObject = this.highlightDays.find((highlightDay) => {
+                    if (highlightDay.date) {
+                        return (moment(highlightDay.date).startOf('day')).isSame(moment(day.date).startOf('day'));
+                    }
+                });
+
+                if (arrayObject !== undefined) {
                     let highlightDayCss = arrayObject.css;
                     css += ' today ' + highlightDayCss;
                 } else {
                     css += ' today ';
                 }
+            } else {
+                css += ' today ';
             }
         }
         if (day.mdp.past) {
