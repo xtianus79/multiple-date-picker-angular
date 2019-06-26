@@ -225,16 +225,21 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
                     }
                     if (day.mdp.today) {
                         if (this.highlightDays !== undefined && this.highlightDays.length > 0) {
-                            var arrayObject = this.highlightDays.find(function (x) { return x.css; });
-                            // let index = this.highlightDays.indexOf(arrayObject); // gives number of occurenses in array
-                            var arrayKeys = Object.keys(this.highlightDays);
-                            if (arrayObject !== undefined && arrayKeys.length > 0) {
+                            var arrayObject = this.highlightDays.find(function (highlightDay) {
+                                if (highlightDay.date) {
+                                    return (moment(highlightDay.date).startOf('day')).isSame(moment(day.date).startOf('day'));
+                                }
+                            });
+                            if (arrayObject !== undefined) {
                                 var highlightDayCss = arrayObject.css;
                                 css += ' today ' + highlightDayCss;
                             }
                             else {
                                 css += ' today ';
                             }
+                        }
+                        else {
+                            css += ' today ';
                         }
                     }
                     if (day.mdp.past) {
