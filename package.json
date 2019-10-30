@@ -64,7 +64,7 @@
     "karma-mocha-reporter": "2.2.3",
     "karma-phantomjs-launcher": "1.0.4",
     "karma-webpack": "2.0.4",
-    "marked": "0.3.6",
+    "marked": "0.7.0",
     "node-sass": "4.5.3",
     "phantomjs-prebuilt": "2.1.14",
     "raw-loader": "0.5.1",
