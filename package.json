@@ -30,7 +30,7 @@
   },
   "bugs": {
     "url": "https://github.com/xtianus79/multiple-date-picker-angular/issues",
-    "email" : "xtianus@live.com"
+    "email": "xtianus@live.com"
   },
   "author": "Christian Matthias Holes <xtianus@live.com>",
   "license": "MIT",
@@ -65,7 +65,7 @@
     "karma-phantomjs-launcher": "1.0.4",
     "karma-webpack": "2.0.4",
     "marked": "0.3.6",
-    "node-sass": "4.5.3",
+    "node-sass": "^4.14.1",
     "phantomjs-prebuilt": "2.1.14",
     "raw-loader": "0.5.1",
     "reflect-metadata": "0.1.10",
@@ -80,7 +80,7 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "dependencies": { 
+  "dependencies": {
     "moment": "2.18.1"
   }
 }
