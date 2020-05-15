@@ -56,6 +56,7 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
                 }
                 MultipleDatePickerComponent_1 = MultipleDatePickerComponent;
                 MultipleDatePickerComponent.prototype.ngOnInit = function () {
+                    moment.locale(this.locale || 'en-US'); //dynamic locale
                     /**
                      * check to see if this.month is undefined... if it is set to todays date info
                      * protection for calendar month adjustments -- otherwise will break upon loading
@@ -448,6 +449,10 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
                 ], MultipleDatePickerComponent.prototype, "changeYearFuture", void 0);
                 __decorate([
                     core_1.Input(),
+                    __metadata("design:type", String)
+                ], MultipleDatePickerComponent.prototype, "locale", void 0);
+                __decorate([
+                    core_1.Input(),
                     __metadata("design:type", Object)
                 ], MultipleDatePickerComponent.prototype, "month", void 0);
                 __decorate([
@@ -653,17 +658,17 @@ System.register("index", ["multiple-date-picker.component", "date-range-helper",
         }
     };
 });
-System.register("multiple-date-picker.module", ["@angular/core", "@angular/platform-browser", "@angular/forms", "index"], function (exports_6, context_6) {
+System.register("multiple-date-picker.module", ["@angular/core", "@angular/common", "@angular/forms", "index"], function (exports_6, context_6) {
     "use strict";
     var __moduleName = context_6 && context_6.id;
-    var core_4, platform_browser_1, forms_2, index_1, MultipleDatePickerModule;
+    var core_4, common_1, forms_2, index_1, MultipleDatePickerModule;
     return {
         setters: [
             function (core_4_1) {
                 core_4 = core_4_1;
             },
-            function (platform_browser_1_1) {
-                platform_browser_1 = platform_browser_1_1;
+            function (common_1_1) {
+                common_1 = common_1_1;
             },
             function (forms_2_1) {
                 forms_2 = forms_2_1;
@@ -679,7 +684,7 @@ System.register("multiple-date-picker.module", ["@angular/core", "@angular/platf
                 MultipleDatePickerModule = __decorate([
                     core_4.NgModule({
                         imports: [
-                            platform_browser_1.BrowserModule,
+                            common_1.CommonModule,
                             forms_2.FormsModule
                         ],
                         declarations: [

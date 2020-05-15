@@ -23,6 +23,7 @@ export declare class MultipleDatePickerComponent implements OnInit, ControlValue
     disableDaysAfter: any;
     changeYearPast: string;
     changeYearFuture: string;
+    locale: string;
     arrow: number;
     monthAdjustment: any;
     month: moment.Moment;

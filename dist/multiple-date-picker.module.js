@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
+var common_1 = require("@angular/common");
 var forms_1 = require("@angular/forms");
 // add DateClicked Helper to providers if used in future. remember to add to index.ts for export
 var index_1 = require("./index");
@@ -11,7 +11,7 @@ var MultipleDatePickerModule = (function () {
     MultipleDatePickerModule.decorators = [
         { type: core_1.NgModule, args: [{
                     imports: [
-                        platform_browser_1.BrowserModule,
+                        common_1.CommonModule,
                         forms_1.FormsModule
                     ],
                     declarations: [

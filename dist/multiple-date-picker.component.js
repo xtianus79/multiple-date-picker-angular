@@ -20,6 +20,7 @@ var MultipleDatePickerComponent = (function () {
         this.propagateChange = function (_) { };
     }
     MultipleDatePickerComponent.prototype.ngOnInit = function () {
+        moment.locale(this.locale || 'en-US'); //dynamic locale
         /**
          * check to see if this.month is undefined... if it is set to todays date info
          * protection for calendar month adjustments -- otherwise will break upon loading
@@ -364,6 +365,7 @@ var MultipleDatePickerComponent = (function () {
         'disableDaysAfter': [{ type: core_1.Input },],
         'changeYearPast': [{ type: core_1.Input },],
         'changeYearFuture': [{ type: core_1.Input },],
+        'locale': [{ type: core_1.Input },],
         'month': [{ type: core_1.Input },],
         'projectScope': [{ type: core_1.Input },],
         'sundayFirstDay': [{ type: core_1.Input },],

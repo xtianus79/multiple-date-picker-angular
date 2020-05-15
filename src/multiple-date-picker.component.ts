@@ -37,6 +37,7 @@ export class MultipleDatePickerComponent implements OnInit, ControlValueAccessor
     @Input() disableDaysAfter: any;
     @Input() changeYearPast: string;
     @Input() changeYearFuture: string;
+    @Input() locale: string;
     arrow: number = 0;
     monthAdjustment: any;
     @Input() month = moment().startOf('day');  // today's day at start of day midnight or passed in value
@@ -59,6 +60,7 @@ export class MultipleDatePickerComponent implements OnInit, ControlValueAccessor
     }
 
     ngOnInit(): void {
+        moment.locale(this.locale || 'en-US') //dynamic locale
         /**
          * check to see if this.month is undefined... if it is set to todays date info
          * protection for calendar month adjustments -- otherwise will break upon loading
