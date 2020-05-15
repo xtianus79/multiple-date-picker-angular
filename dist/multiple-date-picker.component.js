@@ -20,6 +20,7 @@ var MultipleDatePickerComponent = (function () {
         this.propagateChange = function (_) { };
     }
     MultipleDatePickerComponent.prototype.ngOnInit = function () {
+        moment.locale(this.locale || 'en-US'); //dynamic locale
         /**
          * check to see if this.month is undefined... if it is set to todays date info
          * protection for calendar month adjustments -- otherwise will break upon loading
@@ -31,7 +32,6 @@ var MultipleDatePickerComponent = (function () {
         this.daysOfWeek = this.getDaysOfWeek();
         this.arrowSelected();
         this.weekDaysOff = this.weekDaysOff || [];
-        moment.locale(this.locale || 'en-US');
     };
     MultipleDatePickerComponent.prototype.arrowSelected = function () {
         if (this.matIcons) {

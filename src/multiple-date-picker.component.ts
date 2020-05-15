@@ -60,6 +60,7 @@ export class MultipleDatePickerComponent implements OnInit, ControlValueAccessor
     }
 
     ngOnInit(): void {
+        moment.locale(this.locale || 'en-US') //dynamic locale
         /**
          * check to see if this.month is undefined... if it is set to todays date info
          * protection for calendar month adjustments -- otherwise will break upon loading
@@ -72,7 +73,6 @@ export class MultipleDatePickerComponent implements OnInit, ControlValueAccessor
         this.daysOfWeek = this.getDaysOfWeek();
         this.arrowSelected();
         this.weekDaysOff = this.weekDaysOff || [];
-        moment.locale(this.locale || 'en-US')
     }
 
     arrowSelected() {
