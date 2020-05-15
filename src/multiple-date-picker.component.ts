@@ -37,6 +37,7 @@ export class MultipleDatePickerComponent implements OnInit, ControlValueAccessor
     @Input() disableDaysAfter: any;
     @Input() changeYearPast: string;
     @Input() changeYearFuture: string;
+    @Input() locale: string;
     arrow: number = 0;
     monthAdjustment: any;
     @Input() month = moment().startOf('day');  // today's day at start of day midnight or passed in value
@@ -71,6 +72,7 @@ export class MultipleDatePickerComponent implements OnInit, ControlValueAccessor
         this.daysOfWeek = this.getDaysOfWeek();
         this.arrowSelected();
         this.weekDaysOff = this.weekDaysOff || [];
+        moment.locale(this.locale || 'en-US')
     }
 
     arrowSelected() {
